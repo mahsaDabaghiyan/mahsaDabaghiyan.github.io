@@ -1,0 +1,1294 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../11-risks-tech-debt/">
+      
+      
+        <link rel="next" href="../12-glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۱۲. استفاده از هوش مصنوعی - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۱۲. استفاده از هوش مصنوعی
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. استفاده از هوش مصنوعی
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. استفاده از هوش مصنوعی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ابزارهای استفاده‌شده
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه اول: جستجو و تحقیق در پروژه‌های صنعتی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه دوم: تولید کد معماری مبتنی بر مدل C4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="حوزه دوم: تولید کد معماری مبتنی بر مدل C4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تولید کد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چالش‌های اصلی در تولید کد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعداد رفت و برگشت‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تأیید نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه سوم: نگارش، ویرایش و بهبود محتوای سند
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="حوزه سوم: نگارش، ویرایش و بهبود محتوای سند">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تولید محتوا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعداد رفت و برگشت‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعامل انسان و هوش مصنوعی در این پروژه
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چالش‌های اصلی در همکاری با هوش مصنوعی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دستاوردهای همکاری با هوش مصنوعی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        جمع‌بندی
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۳. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ابزارهای استفاده‌شده
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه اول: جستجو و تحقیق در پروژه‌های صنعتی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه دوم: تولید کد معماری مبتنی بر مدل C4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="حوزه دوم: تولید کد معماری مبتنی بر مدل C4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تولید کد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چالش‌های اصلی در تولید کد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعداد رفت و برگشت‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تأیید نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوزه سوم: نگارش، ویرایش و بهبود محتوای سند
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="حوزه سوم: نگارش، ویرایش و بهبود محتوای سند">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فرآیند تولید محتوا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعداد رفت و برگشت‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تعامل انسان و هوش مصنوعی در این پروژه
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چالش‌های اصلی در همکاری با هوش مصنوعی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دستاوردهای همکاری با هوش مصنوعی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        جمع‌بندی
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">استفاده از ابزارهای هوش مصنوعی در تدوین سند معماری</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">در فرآیند تدوین این سند معماری، از ابزارهای هوش مصنوعی به عنوان دستیار کمکی برای افزایش سرعت، دقت و کیفیت مستندسازی استفاده شده است.</span></p>
+<p>هدف از استفاده از این ابزارها، تسهیل فرآیند نگارش، بهبود ساختار سند و اطمینان از انطباق با استانداردهای صنعتی بوده است. در این پروژه، هوش مصنوعی در سه حوزه اصلی نقش داشته است: جستجو و تحقیق، تولید کد معماری، و نگارش و ویرایش محتوا. تمام مراحل نیز با نظارت و تأیید انسانی انجام شده است. کل این فرآیند از صفر تا صد، حدوداً <span style="color: #1976D2; font-weight: bold;">۱۰ روز</span> زمان برده است.</p>
+<h2 id="_3"><span style="color: #E91E63;">ابزارهای استفاده‌شده</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">در این پروژه، از مدل زبانی DeepSeek به عنوان دستیار هوشمند برای تولید، بازنویسی و بهبود محتوای سند استفاده شده است.</span></p>
+<p><span style="color: #1976D2; font-weight: bold;">مدل هوش مصنوعی مورد استفاده:</span> DeepSeek</p>
+<h2 id="_4"><span style="color: #E91E63;">حوزه اول: جستجو و تحقیق در پروژه‌های صنعتی</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>یکی از مهم‌ترین کاربردهای هوش مصنوعی در این پروژه، جستجو و تحقیق در پروژه‌های مختلف موجود در گیت‌هاب و صنعت نرم‌افزار بوده است. با توجه به اینکه معماری سامانه فروشگاه اینترنتی شباهت‌های زیادی با پروژه‌های مشابه در صنعت دارد، از هوش مصنوعی برای موارد زیر استفاده شد:</p>
+<ul>
+<li>شناسایی پروژه‌های مرجع و موفق در حوزه فروشگاه‌های اینترنتی</li>
+<li>بررسی الگوهای معماری استفاده‌شده در این پروژه‌ها</li>
+<li>مطالعه تصمیمات معماری مشابه و پیامدهای آنها</li>
+<li>بررسی فناوری‌های به‌کاررفته در پروژه‌های موفق صنعتی</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نقش هوش مصنوعی:</span> تسهیل فرآیند جستجو و گردآوری اطلاعات از منابع مختلف و ارائه خلاصه‌ای از بهترین شیوه‌های صنعتی.</p>
+<p><span style="color: #1976D2; font-weight: bold;">نقش انسانی:</span> تعیین حوزه‌های مورد نیاز برای تحقیق و تأیید صحت اطلاعات گردآوری‌شده.</p>
+<h2 id="c4"><span style="color: #E91E63;">حوزه دوم: تولید کد معماری مبتنی بر مدل C4</span><a class="headerlink" href="#c4" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">این بخش یکی از چالش‌برانگیزترین بخش‌های همکاری با هوش مصنوعی بوده است.</span></p>
+<h3 id="_5"><span style="color: #E91E63;">فرآیند تولید کد</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>پس از درک نیازمندی‌ها و مطالعه پروژه‌های مرجع، از هوش مصنوعی خواسته شد تا کد معماری مبتنی بر مدل C4 را تولید کند. این کد باید شامل موارد زیر می‌بود:</p>
+<ul>
+<li>تعریف ذی‌نفعان و سامانه‌های خارجی</li>
+<li>تعریف سرویس‌ها، کامپوننت‌ها و پایگاه‌های داده</li>
+<li>تعریف ارتباطات بین سرویس‌ها</li>
+<li>تعریف ساختار استقرار</li>
+</ul>
+<h3 id="_6"><span style="color: #E91E63;">چالش‌های اصلی در تولید کد</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">۱. درک سلسله‌مراتب:</span></p>
+<p>یکی از بزرگ‌ترین چالش‌ها، درک صحیح سلسله‌مراتب در مدل C4 بوده است. هوش مصنوعی در ابتدا در تشخیص تفاوت بین سطوح مختلف مدل C4 دچار مشکل می‌شد. به عنوان مثال، گاهی کامپوننت‌ها را در سطح کانتینر قرار می‌داد یا روابط بین سطوح مختلف را به درستی تعریف نمی‌کرد. این مسئله نیاز به توضیحات مکرر و مثال‌های متعدد داشته است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">۲. شناسایی صحیح مؤلفه‌ها:</span></p>
+<p>هوش مصنوعی در شناسایی و دسته‌بندی صحیح مؤلفه‌ها نیاز به راهنمایی مکرر داشت. گاهی سرویس‌ها را با هم اشتباه می‌گرفت یا روابط بین آنها را نادرست تعریف می‌کرد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">۳. تعریف ارتباطات:</span></p>
+<p>تعریف صحیح ارتباطات بین سرویس‌ها و تشخیص اینکه کدام ارتباطات باید از طریق REST API و کدام از طریق کافکا انجام شوند، یکی دیگر از چالش‌های اصلی بوده است.</p>
+<h3 id="_7"><span style="color: #E91E63;">تعداد رفت و برگشت‌ها</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>برای تولید کد معماری نهایی، بیش از <span style="color: #1976D2; font-weight: bold;">۳۰ بار رفت و برگشت</span> بین من و هوش مصنوعی انجام شده است. هر بار:</p>
+<ul>
+<li>هوش مصنوعی نسخه‌ای از کد را تولید می‌کرد.</li>
+<li>من کد را بررسی و خطاها و مشکلات را شناسایی می‌کردم.</li>
+<li>بازخورد دقیق به هوش مصنوعی ارائه می‌دادم.</li>
+<li>هوش مصنوعی کد را اصلاح می‌کرد و نسخه جدید ارائه می‌داد.</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نمونه‌ای از بازخوردهای من به هوش مصنوعی:</span></p>
+<ul>
+<li>"سلسله‌مراتب درست نیست. کامپوننت‌ها باید داخل کانتینر تعریف شوند، نه در سطح سیستم."</li>
+<li>"ارتباط بین سرویس کاتالوگ و سرویس موجودی باید از طریق REST باشد، نه کافکا."</li>
+<li>"پایگاه داده MongoDB باید به سرویس کاتالوگ متصل باشد، نه مستقیماً به سیستم."</li>
+<li>"ساختار استقرار باید شامل دو منطقه در دسترس باشد، نه یک منطقه."</li>
+</ul>
+<h3 id="_8"><span style="color: #E91E63;">فرآیند تأیید نهایی</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>پس از تولید کد نهایی توسط هوش مصنوعی، من شخصاً کد را کامپایل و اجرا کردم و خروجی‌های نهایی شامل نمودارهای SVG را دریافت نمودم. این فرآیند شامل موارد زیر بوده است:</p>
+<ul>
+<li>بررسی صحت کد از نظر سینتکس</li>
+<li>اجرای کد در محیط Structurizr</li>
+<li>بررسی نمودارهای خروجی از نظر صحت و کامل بودن</li>
+<li>اصلاحات نهایی در صورت نیاز</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نقش هوش مصنوعی:</span> تولید کد اولیه و اصلاح آن بر اساس بازخوردها.</p>
+<p><span style="color: #1976D2; font-weight: bold;">نقش انسانی:</span> درک دقیق نیازمندی‌ها، ارائه بازخوردهای دقیق و مکرر، تأیید صحت کد، کامپایل و اجرا و دریافت خروجی‌ها.</p>
+<h2 id="_9"><span style="color: #E91E63;">حوزه سوم: نگارش، ویرایش و بهبود محتوای سند</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10"><span style="color: #E91E63;">فرآیند تولید محتوا</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>در این بخش، من محتوای اولیه و فهم کلی از هر بخش از سند را در اختیار هوش مصنوعی قرار دادم و هوش مصنوعی نقش‌های زیر را ایفا کرد:</p>
+<p><span style="color: #1976D2; font-weight: bold;">نگارش و تدوین:</span></p>
+<p>بر اساس محتوای اولیه‌ای که من تهیه کرده بودم، هوش مصنوعی متن را به‌صورت منسجم و ساختاریافته تدوین کرد. این کار شامل سازماندهی بخش‌ها بر اساس الگوی arc42، ایجاد جداول و قالب‌بندی مناسب بوده است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ویرایش و اصلاح نگارش:</span></p>
+<p>هوش مصنوعی به‌عنوان یک ویراستار حرفه‌ای عمل کرد و متن را از نظر نگارش فارسی، روان‌سازی جملات و رعایت اصول نگارش فنی بهبود بخشید.</p>
+<p><span style="color: #1976D2; font-weight: bold;">نقش منتقد و مشاور:</span></p>
+<p>یکی از مهم‌ترین نقش‌های هوش مصنوعی در این پروژه، نقش منتقد و مشاور بوده است. هوش مصنوعی با بررسی بخش‌های مختلف سند، نقاط ضعف، ناهماهنگی‌ها و موارد قابل بهبود را شناسایی و به من ارائه داد.</p>
+<h3 id="_11"><span style="color: #E91E63;">تعداد رفت و برگشت‌ها</span><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>برای تولید محتوای نهایی سند، بیش از <span style="color: #1976D2; font-weight: bold;">۲۰ بار رفت و برگشت</span> بین من و هوش مصنوعی انجام شده است. هر بار:</p>
+<ul>
+<li>هوش مصنوعی نسخه‌ای از محتوا را تولید یا اصلاح می‌کرد.</li>
+<li>من محتوا را بررسی و موارد قابل بهبود را شناسایی می‌کردم.</li>
+<li>بازخورد دقیق به هوش مصنوعی ارائه می‌دادم.</li>
+<li>هوش مصنوعی محتوا را اصلاح می‌کرد و نسخه جدید ارائه می‌داد.</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نمونه‌ای از بازخوردهای من به هوش مصنوعی:</span></p>
+<ul>
+<li>"این بخش با بخش قبلی تناقض دارد. لطفاً هماهنگش کن."</li>
+<li>"کلمات انگلیسی را از پرانتز خارج کن و به پانویس ببر."</li>
+<li>"جملات باید با فعل تمام شوند."</li>
+<li>"این بخش نیاز به توضیح بیشتری دارد."</li>
+<li>"جدول‌ها باید وسط‌چین باشند."</li>
+<li>"رنگ تایتل‌ها باید صورتی پاستیلی باشد."</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نقش هوش مصنوعی:</span> نگارش، ویرایش، بهبود کیفیت نگارش و ارائه بازخوردهای سازنده به عنوان منتقد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">نقش انسانی:</span> ارائه محتوای اولیه و فهم کلی، ارائه بازخوردهای دقیق و مکرر، تأیید نهایی تغییرات و تصمیم‌گیری در مورد پذیرش یا رد پیشنهادات هوش مصنوعی.</p>
+<h2 id="_12"><span style="color: #E91E63;">تعامل انسان و هوش مصنوعی در این پروژه</span><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">فرآیند تدوین این سند یک تعامل پویا بین من و هوش مصنوعی بوده است که در آن هر دو نقش مکمل ایفا کرده‌اند.</span></p>
+<p><span style="color: #1976D2; font-weight: bold;">نقش انسان (من):</span></p>
+<ul>
+<li>درک و تحلیل نیازمندی‌های معماری</li>
+<li>مطالعه پروژه‌های مرجع و شناخت بهترین شیوه‌های صنعتی</li>
+<li>ارائه نیازمندی‌های دقیق به هوش مصنوعی برای تولید کد</li>
+<li>ارائه بازخوردهای مکرر و دقیق در مورد سلسله‌مراتب، مؤلفه‌ها و روابط</li>
+<li>کامپایل و اجرای کد و دریافت خروجی‌ها</li>
+<li>ارائه محتوای اولیه و فهم کلی از هر بخش</li>
+<li>تأیید صحت و دقت اطلاعات فنی</li>
+<li>ارائه بازخوردهای مکرر در مورد نگارش و ساختار</li>
+<li>تصمیم‌گیری نهایی در مورد تغییرات پیشنهادی</li>
+<li>تأیید نهایی سند</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">نقش هوش مصنوعی:</span></p>
+<ul>
+<li>جستجو و تحقیق در پروژه‌های صنعتی</li>
+<li>تولید کد معماری بر اساس نیازمندی‌ها</li>
+<li>اصلاح کد بر اساس بازخوردهای مکرر</li>
+<li>نگارش و تدوین محتوای سند</li>
+<li>ویرایش و بهبود نگارش فارسی</li>
+<li>ارائه بازخورد به عنوان منتقد و مشاور</li>
+<li>پیشنهاد بهبود در ساختار و محتوا</li>
+</ul>
+<h2 id="_13"><span style="color: #E91E63;">چالش‌های اصلی در همکاری با هوش مصنوعی</span><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">۱. درک سلسله‌مراتب مدل C4:</span></p>
+<p>هوش مصنوعی در ابتدا در تشخیص تفاوت بین سطوح مختلف مدل C4 دچار مشکل می‌شد و نیاز به توضیحات مکرر و مثال‌های متعدد داشته است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">۲. تشخیص مؤلفه‌ها و روابط:</span></p>
+<p>هوش مصنوعی گاهی مؤلفه‌ها را با هم اشتباه می‌گرفت یا روابط بین آنها را نادرست تعریف می‌کرد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">۳. هماهنگی بین بخش‌های مختلف:</span></p>
+<p>هوش مصنوعی در هماهنگی بین بخش‌های مختلف سند نیاز به راهنمایی داشته است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">۴. درک تفاوت‌های ظریف حوزه کسب‌وکار:</span></p>
+<p>هوش مصنوعی نمی‌توانست تفاوت‌های ظریف حوزه فروشگاه‌های اینترنتی را به‌خوبی درک کند و نیاز به توضیحات تکمیلی داشته است.</p>
+<h2 id="_14"><span style="color: #E91E63;">دستاوردهای همکاری با هوش مصنوعی</span><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">با وجود چالش‌ها، استفاده از هوش مصنوعی مزایای قابل‌توجهی داشته است:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">تسریع فرآیند تولید محتوا:</span> هوش مصنوعی به‌طور قابل‌توجهی فرآیند تولید محتوای اولیه را تسریع کرده است. بسیاری از بخش‌های سند که به‌صورت دستی ممکن است زمان بسیار بیشتری می‌برد، با کمک هوش مصنوعی در بازه زمانی کوتاه‌تری تولید شده‌اند. با این حال، کل فرآیند از صفر تا صد، حدوداً ۱۰ روز زمان برده است که شامل تحقیق، تولید کد، نگارش، بازنویسی‌های مکرر و تأیید نهایی می‌شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یکپارچگی و هماهنگی:</span> هوش مصنوعی به هماهنگی بین بخش‌های مختلف سند کمک کرده است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کیفیت نگارش:</span> با بازنویسی‌های مکرر، سند از نگارش فارسی روان و حرفه‌ای برخوردار شده است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">جامعیت:</span> هوش مصنوعی اطمینان حاصل کرده است که تمام جنبه‌های معماری در سند پوشش داده شده است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">نقش منتقد:</span> هوش مصنوعی به عنوان یک منتقد سازنده، نقاط ضعف و ناهماهنگی‌ها را شناسایی کرده است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پیشنهادات بهبود:</span> هوش مصنوعی پیشنهادات مفیدی برای بهبود ساختار و محتوای سند ارائه داده است.</p>
+</li>
+</ul>
+<h2 id="_15"><span style="color: #E91E63;">جمع‌بندی</span><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">در این پروژه، هوش مصنوعی به عنوان یک دستیار توانمند در سه حوزه جستجو، تولید کد و نگارش محتوا عمل کرده است.</span></p>
+<p>با این حال، نقش اصلی در طراحی معماری، درک نیازمندی‌ها، تأیید صحت محتوا و تصمیم‌گیری‌های نهایی بر عهده من بوده است. فرآیند همکاری با هوش مصنوعی بیش از <span style="color: #1976D2; font-weight: bold;">۵۰ بار رفت و برگشت</span> داشته است که نشان‌دهنده تعامل عمیق و مستمر بین انسان و هوش مصنوعی در این پروژه می‌باشد.</p>
+<p>کل این فرآیند از صفر تا صد، حدوداً <span style="color: #1976D2; font-weight: bold;">۱۰ روز</span> زمان برده است که شامل تحقیق در پروژه‌های صنعتی، تولید و اصلاح کد معماری، نگارش و بازنویسی محتوای ۱۳ بخش سند، و تأیید نهایی می‌شود. بدون کمک هوش مصنوعی، این فرآیند قطعاً زمان بسیار بیشتری نیاز داشت مخصوصا برای فردی مانند من که تجربه کمی دارد اما تعیین درست و غلط و انتخاب تصمیمات کلان معماری   را باید انجام دهد.</p>
+<p>هوش مصنوعی با تسریع فرآیند تولید محتوا، به من امکان داده است تا زمان بیشتری را به تحلیل معماری، اعتبارسنجی اطلاعات و بهبود کیفیت نهایی سند اختصاص دهم. با این حال، تمام تصمیمات کلیدی معماری و تأیید نهایی محتوا توسط انسان انجام شده است و هوش مصنوعی نقش یک دستیار توانمند و منتقد سازنده را ایفا کرده است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">مدل هوش مصنوعی مورد استفاده:</span> DeepSeek</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
