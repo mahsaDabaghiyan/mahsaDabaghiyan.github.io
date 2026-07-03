@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Vazirmatn, Tahoma, sans-serif" dir="rtl">
+  <style>
+    text { font-family: Vazirmatn, Tahoma, sans-serif; }
+    .actor-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; rx: 8; }
+    .actor-text { fill: white; font-size: 12px; font-weight: bold; text-anchor: middle; }
+    .line { stroke: #7f8c8d; stroke-width: 2; stroke-dasharray: 6,4; }
+    .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .arrow-return { stroke: #2c3e50; stroke-width: 2; stroke-dasharray: 6,4; fill: none; marker-end: url(#arrowhead); }
+    .label { font-size: 10px; fill: #2c3e50; text-anchor: middle; }
+    .label-right { font-size: 10px; fill: #2c3e50; text-anchor: start; }
+    .title { font-size: 14px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+    .phase { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 1; rx: 5; }
+    .phase-text { font-size: 11px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- عنوان -->
+  <text x="400" y="25" class="title">نمودار توالی ثبت سفارش - بخش همگام</text>
+
+  <!-- بازیگران -->
+  <rect x="30" y="45" width="100" height="35" class="actor-box"/>
+  <text x="80" y="67" class="actor-text">مشتری</text>
+
+  <rect x="160" y="45" width="100" height="35" class="actor-box"/>
+  <text x="210" y="67" class="actor-text">برنامه وب</text>
+
+  <rect x="290" y="45" width="100" height="35" class="actor-box"/>
+  <text x="340" y="67" class="actor-text">دروازه</text>
+
+  <rect x="420" y="45" width="100" height="35" class="actor-box"/>
+  <text x="470" y="67" class="actor-text">سرویس سفارش</text>
+
+  <rect x="550" y="45" width="100" height="35" class="actor-box"/>
+  <text x="600" y="67" class="actor-text">پایگاه داده</text>
+
+  <rect x="680" y="45" width="100" height="35" class="actor-box"/>
+  <text x="730" y="67" class="actor-text">سرویس موجودی</text>
+
+  <!-- خطوط زندگی -->
+  <line x1="80" y1="80" x2="80" y2="560" class="line"/>
+  <line x1="210" y1="80" x2="210" y2="560" class="line"/>
+  <line x1="340" y1="80" x2="340" y2="560" class="line"/>
+  <line x1="470" y1="80" x2="470" y2="560" class="line"/>
+  <line x1="600" y1="80" x2="600" y2="560" class="line"/>
+  <line x1="730" y1="80" x2="730" y2="560" class="line"/>
+
+  <!-- مرحله ۱ -->
+  <rect x="250" y="110" width="160" height="22" class="phase" rx="5" fill="#e8f8f5" stroke="#1abc9c"/>
+  <text x="330" y="125" class="phase-text" fill="#1a7a6a">مرحله ۱: افزودن به سبد خرید</text>
+  
+  <line x1="80" y1="145" x2="205" y2="145" class="arrow"/>
+  <text x="143" y="138" class="label">افزودن محصول</text>
+
+  <!-- مرحله ۲ -->
+  <rect x="250" y="170" width="160" height="22" class="phase" rx="5" fill="#e8f8f5" stroke="#1abc9c"/>
+  <text x="330" y="185" class="phase-text" fill="#1a7a6a">مرحله ۲: استعلام موجودی</text>
+
+  <line x1="210" y1="205" x2="725" y2="205" class="arrow"/>
+  <text x="468" y="198" class="label">استعلام موجودی</text>
+
+  <line x1="725" y1="225" x2="215" y2="225" class="arrow-return"/>
+  <text x="470" y="243" class="label-right">پاسخ موجودی</text>
+
+  <!-- مرحله ۳ -->
+  <rect x="250" y="260" width="160" height="22" class="phase" rx="5" fill="#e8f8f5" stroke="#1abc9c"/>
+  <text x="330" y="275" class="phase-text" fill="#1a7a6a">مرحله ۳: ورود اطلاعات</text>
+
+  <line x1="80" y1="295" x2="205" y2="295" class="arrow"/>
+  <text x="143" y="288" class="label">ورود آدرس و پرداخت</text>
+
+  <!-- مرحله ۴ -->
+  <rect x="250" y="320" width="160" height="22" class="phase" rx="5" fill="#e8f8f5" stroke="#1abc9c"/>
+  <text x="330" y="335" class="phase-text" fill="#1a7a6a">مرحله ۴: ثبت سفارش</text>
+
+  <line x1="210" y1="355" x2="335" y2="355" class="arrow"/>
+  <text x="273" y="348" class="label">درخواست ثبت سفارش</text>
+
+  <line x1="340" y1="375" x2="465" y2="375" class="arrow"/>
+  <text x="403" y="368" class="label">ثبت سفارش</text>
+
+  <!-- مرحله ۵ -->
+  <rect x="250" y="400" width="160" height="22" class="phase" rx="5" fill="#e8f8f5" stroke="#1abc9c"/>
+  <text x="330" y="415" class="phase-text" fill="#1a7a6a">مرحله ۵: ذخیره در پایگاه داده</text>
+
+  <line x1="470" y1="435" x2="595" y2="435" class="arrow"/>
+  <text x="533" y="428" class="label">ایجاد سفارش</text>
+
+  <line x1="595" y1="455" x2="475" y2="455" class="arrow-return"/>
+  <text x="535" y="473" class="label-right">تأیید ایجاد</text>
+
+  <!-- بازگشت به مشتری -->
+  <line x1="470" y1="490" x2="215" y2="490" class="arrow-return"/>
+  <text x="343" y="508" class="label-right">کد پیگیری سفارش</text>
+
+  <!-- توضیحات پایین -->
+  <text x="400" y="545" font-size="10" fill="#7f8c8d" text-anchor="middle">این بخش شامل تعاملات همگام (همزمان) بین مشتری، برنامه وب و سرویس‌ها است.</text>
+</svg>

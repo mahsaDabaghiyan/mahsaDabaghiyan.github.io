@@ -1,0 +1,2355 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../08-crosscutting-concepts/">
+      
+      
+        <link rel="next" href="../10-quality-requirements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۹. تصمیمات معماری - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۹. تصمیمات معماری
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۱: انتخاب معماری ریزخدمات
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۱: انتخاب معماری ریزخدمات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۲: انتخاب کافکا برای ارتباطات ناهمگام
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۲: انتخاب کافکا برای ارتباطات ناهمگام">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۳: انتخاب چندشکلی پایگاه داده
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۳: انتخاب چندشکلی پایگاه داده">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۴: انتخاب کوکرنیتس برای ارکستراسیون
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۴: انتخاب کوکرنیتس برای ارکستراسیون">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۵: انتخاب دروازه رابط برنامه‌نویسی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۵: انتخاب دروازه رابط برنامه‌نویسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۶: انتخاب استراتژی بازیابی در شرایط فاجعه
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۶: انتخاب استراتژی بازیابی در شرایط فاجعه">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۷: انتخاب رویکرد پایش و مشاهده‌پذیری
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۷: انتخاب رویکرد پایش و مشاهده‌پذیری">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۸: انتخاب استراتژی مقاوم‌سازی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۸: انتخاب استراتژی مقاوم‌سازی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۱: انتخاب معماری ریزخدمات
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۱: انتخاب معماری ریزخدمات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۲: انتخاب کافکا برای ارتباطات ناهمگام
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۲: انتخاب کافکا برای ارتباطات ناهمگام">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۳: انتخاب چندشکلی پایگاه داده
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۳: انتخاب چندشکلی پایگاه داده">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۴: انتخاب کوکرنیتس برای ارکستراسیون
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۴: انتخاب کوکرنیتس برای ارکستراسیون">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۵: انتخاب دروازه رابط برنامه‌نویسی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۵: انتخاب دروازه رابط برنامه‌نویسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۶: انتخاب استراتژی بازیابی در شرایط فاجعه
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۶: انتخاب استراتژی بازیابی در شرایط فاجعه">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۷: انتخاب رویکرد پایش و مشاهده‌پذیری
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۷: انتخاب رویکرد پایش و مشاهده‌پذیری">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-۰۰۸: انتخاب استراتژی مقاوم‌سازی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADR-۰۰۸: انتخاب استراتژی مقاوم‌سازی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زمینه و مسئله
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گزینه‌های بررسی‌شده
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تصمیم نهایی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دلایل تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پیامدهای تصمیم
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">تصمیمات معماری</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">ثبت تصمیمات معماری، یکی از مهم‌ترین بخش‌های مستندسازی معماری نرم‌افزار است.</span></p>
+<p>در این بخش، تمام تصمیمات کلیدی که در طول فرآیند طراحی معماری سامانه گرفته شده‌اند، به‌صورت مستند و ساختاریافته ثبت می‌گردند. هر تصمیم معماری شامل زمینه، مسئله، گزینه‌های بررسی‌شده، تصمیم نهایی، دلایل و پیامدهای آن می‌باشد. این مستندات به تیم‌های توسعه کمک می‌کند تا درک عمیق‌تری از منطق پشت هر تصمیم داشته باشند و از تکرار اشتباهات جلوگیری نمایند.</p>
+<p>در ادامه، هشت تصمیم کلیدی معماری سامانه فروشگاه اینترنتی به تفکیک تشریح می‌شوند.</p>
+<h2 id="adr-"><span style="color: #E91E63;">ADR-۰۰۱: انتخاب معماری ریزخدمات</span><a class="headerlink" href="#adr-" title="Permanent link">&para;</a></h2>
+<h3 id="_3"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>سامانه فروشگاه اینترنتی نیاز به پشتیبانی از چهار گروه کاربری اصلی با نیازهای متغیر دارد. این سامانه باید توانایی مقیاس‌پذیری سریع در زمان‌های اوج مصرف مانند حراج‌های فصلی، استقرار مستقل ویژگی‌های جدید توسط تیم‌های مختلف و مدیریت مستقل هر حوزه کسب‌وکار را داشته باشد. همچنین سامانه باید بتواند به‌صورت مستمر و بدون وقفه به‌روزرسانی شود. سؤال اصلی این بود که آیا معماری یکپارچه برای این سامانه مناسب است یا باید از معماری ریزخدمات استفاده شود؟</p>
+<h3 id="_4"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">معماری یکپارچه:</span> تمام قابلیت‌های سامانه در یک برنامه واحد با یک پایگاه داده مشترک.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">معماری ریزخدمات:</span> هر قابلیت به صورت یک سرویس مستقل با پایگاه داده اختصاصی و چرخه استقرار جداگانه.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">معماری لایه‌ای:</span> ترکیبی از رویکردهای مختلف با تعدادی سرویس بزرگ که هر کدام چندین حوزه کسب‌وکار را پوشش می‌دهند.</p>
+</li>
+</ol>
+<h3 id="_5"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">معماری ریزخدمات انتخاب شد.</span>¹</p>
+<h3 id="_6"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقلال تیم‌ها:</span> هر تیم توسعه می‌تواند به صورت مستقل روی سرویس خود کار کند و چرخه تحویل خود را مدیریت نماید. این رویکرد سرعت توسعه را افزایش می‌دهد و وابستگی بین تیم‌ها را کاهش می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری هدفمند:</span> هر سرویس به صورت مستقل مقیاس‌پذیر است. در زمان‌های اوج مصرف، تنها سرویس‌های پرتقاضا مانند سرویس کاتالوگ یا سرویس جستجو مقیاس‌پذیر می‌شوند و هزینه‌ها بهینه می‌گردد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">انعطاف‌پذیری فنی:</span> هر سرویس می‌تواند از فناوری مناسب خود استفاده کند. سرویس توصیه‌گر با Python برای قابلیت‌های یادگیری ماشین و سرویس‌های دیگر با Java برای پایداری و عملکرد بالا پیاده‌سازی شده‌اند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">قابلیت استقرار مستقل:</span> هر سرویس به صورت جداگانه قابل استقرار است و می‌توان بدون تأثیر بر سایر سرویس‌ها، نسخه جدید آن را منتشر کرد. این ویژگی باعث کاهش ریسک استقرار می‌شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">تحمل‌پذیری خطا:</span> خرابی یک سرویس باعث از کار افتادن کل سامانه نمی‌شود. به عنوان مثال، اگر سرویس توصیه‌گر دچار مشکل شود، سایر سرویس‌های اصلی مانند کاتالوگ و سفارش همچنان به کار خود ادامه می‌دهند.</p>
+</li>
+</ul>
+<h3 id="_7"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>افزایش پیچیدگی در مدیریت ارتباطات بین سرویس‌ها که با استفاده از کافکا و الگوی SAGA مدیریت شده است.</p>
+</li>
+<li>
+<p>نیاز به زیرساخت پیشرفته‌تر برای استقرار و مدیریت سرویس‌های متعدد که با استفاده از کوکرنیتس برطرف گردیده است.</p>
+</li>
+<li>
+<p>افزایش هزینه‌های عملیاتی اولیه که با مقیاس‌پذیری هدفمند و بهینه‌سازی منابع جبران می‌شود.</p>
+</li>
+<li>
+<p>نیاز به مستندسازی دقیق و شفاف که این سند بخشی از آن را پوشش می‌دهد.</p>
+</li>
+</ul>
+<h2 id="adr-_1"><span style="color: #E91E63;">ADR-۰۰۲: انتخاب کافکا برای ارتباطات ناهمگام</span><a class="headerlink" href="#adr-_1" title="Permanent link">&para;</a></h2>
+<h3 id="_8"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>سرویس‌های مختلف سامانه نیاز به ارتباط با یکدیگر دارند. برخی از این ارتباطات نیاز به پاسخ فوری دارند و برخی دیگر می‌توانند به صورت ناهمگام انجام شوند. استفاده از ارتباطات همگام برای تمام سناریوها باعث افزایش وابستگی زمانی بین سرویس‌ها و کاهش تحمل‌پذیری خطا می‌شود. سؤال اصلی این بود که از چه ابزاری برای ارتباطات ناهمگام استفاده شود تا از وابستگی‌های زمانی بین سرویس‌ها کاسته شود و تحمل‌پذیری خطا افزایش یابد.</p>
+<h3 id="_9"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Apache Kafka:</span> سامانه توزیع‌شده برای پخش رویداد با توان عملیاتی بالا و ذخیره‌سازی پایدار.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">RabbitMQ:</span> پیام‌رسان با قابلیت مسیریابی پیشرفته و الگوهای مختلف تبادل.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Amazon SQS:</span> سرویس مدیریت‌شده صف در آمازون وب سرویس‌ها با مقیاس‌پذیری خودکار.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Amazon MSK:</span> سرویس مدیریت‌شده کافکا در آمازون وب سرویس‌ها.</p>
+</li>
+</ol>
+<h3 id="_10"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">Apache Kafka انتخاب شد.</span>²</p>
+<h3 id="_11"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">توان عملیاتی بالا:</span> کافکا قادر به پردازش میلیون‌ها پیام در ثانیه است که برای سامانه‌ای با ترافیک بالا ضروری می‌باشد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">تضمین تحویل پیام:</span> کافکا با استفاده از مکانیزم commit log، تحویل پیام را تضمین می‌کند و پیام‌ها بر روی دیسک ذخیره می‌شوند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری ذاتی:</span> کافکا به صورت ذاتی از مصرف‌کنندگان متعدد پشتیبانی می‌کند و می‌تواند با افزایش بار مقیاس‌پذیر شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">حفظ ترتیب پیام‌ها:</span> کافکا ترتیب پیام‌ها را در هر پارتیشن حفظ می‌کند که برای برخی سناریوهای کسب‌وکار حیاتی است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یکپارچه‌سازی با Spring Boot:</span> کافکا به‌خوبی با اکوسیستم Spring Boot یکپارچه می‌شود و پیاده‌سازی تولیدکنندگان و مصرف‌کنندگان را ساده می‌سازد.</p>
+</li>
+</ul>
+<h3 id="_12"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>نیاز به مدیریت خوشه کافکا که با استفاده از کوکرنیتس خودکار شده است.</p>
+</li>
+<li>
+<p>افزایش پیچیدگی در ردیابی و پایش رویدادها که با استفاده از یاگر و پرومتئوس مدیریت می‌شود.</p>
+</li>
+<li>
+<p>نیاز به طراحی دقیق تاپیک‌ها و پارتیشن‌ها که در طراحی اولیه انجام شده است.</p>
+</li>
+<li>
+<p>تأخیر اندک در پردازش رویدادها که برای سناریوهای غیرحساس به زمان قابل قبول است.</p>
+</li>
+</ul>
+<h2 id="adr-_2"><span style="color: #E91E63;">ADR-۰۰۳: انتخاب چندشکلی پایگاه داده</span><a class="headerlink" href="#adr-_2" title="Permanent link">&para;</a></h2>
+<h3 id="_13"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>هر سرویس در معماری ریزخدمات نیاز به ذخیره‌سازی داده‌ها دارد. نوع داده‌ها، الگوی دسترسی و نیازهای عملکردی در سرویس‌های مختلف به‌شدت متفاوت است. به عنوان مثال، سرویس کاتالوگ با داده‌های محصولات با ویژگی‌های متغیر سروکار دارد، در حالی که سرویس سفارش نیاز به تراکنش‌های اسیدی و یکپارچگی ارجاعی دارد. سؤال اصلی این بود که آیا از یک نوع پایگاه داده برای تمام سرویس‌ها استفاده شود یا هر سرویس از پایگاه داده مناسب خود بهره ببرد؟</p>
+<h3 id="_14"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پایگاه داده واحد:</span> استفاده از یک پایگاه داده مشترک برای تمام سرویس‌ها مانند PostgreSQL.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">چندشکلی پایگاه داده:</span> هر سرویس از پایگاه داده مناسب خود با توجه به نوع داده و الگوی دسترسی استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پایگاه داده چندمنظوره:</span> استفاده از یک پایگاه داده که قابلیت‌های مختلفی مانند MongoDB را ارائه می‌دهد.</p>
+</li>
+</ol>
+<h3 id="_15"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">چندشکلی پایگاه داده انتخاب شد.</span>³</p>
+<h3 id="_16"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ساختار داده مناسب:</span> سرویس کاتالوگ با داده‌های محصولات که ویژگی‌های متغیر دارند، به ساختار سندمحور MongoDB نیاز دارد. در مقابل، سرویس‌های سفارش و موجودی به تراکنش‌های ACID و یکپارچگی ارجاعی PostgreSQL نیازمند هستند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">عملکرد بهینه:</span> سرویس جستجو با Elasticsearch به قابلیت جستجوی متن کامل و پاسخ‌گویی در میلی‌ثانیه دست می‌یابد. سرویس تحلیل با ClickHouse می‌تواند کوئری‌های تحلیلی سنگین را به سرعت اجرا کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هزینه بهینه:</span> نیازی به پرداخت هزینه برای قابلیت‌های استفاده‌نشده نیست و هر سرویس فقط هزینه مناسب خود را پرداخت می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">انعطاف‌پذیری:</span> هر تیم می‌تواند بهترین ابزار را برای کار خود انتخاب کند و در صورت نیاز، پایگاه داده را تغییر دهد.</p>
+</li>
+</ul>
+<h3 id="_17"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>افزایش پیچیدگی در مدیریت پایگاه‌های داده متعدد که با استفاده از زیرساخت ابری خودکار شده است.</p>
+</li>
+<li>
+<p>نیاز به تخصص بیشتر در تیم‌های توسعه برای مدیریت پایگاه‌های داده مختلف.</p>
+</li>
+<li>
+<p>چالش در مدیریت تراکنش‌های توزیع‌شده که با الگوی SAGA حل شده است.</p>
+</li>
+<li>
+<p>افزایش هزینه‌های عملیاتی که با عملکرد بهتر و مقیاس‌پذیری هدفمند جبران می‌شود.</p>
+</li>
+</ul>
+<h2 id="adr-_3"><span style="color: #E91E63;">ADR-۰۰۴: انتخاب کوکرنیتس برای ارکستراسیون</span><a class="headerlink" href="#adr-_3" title="Permanent link">&para;</a></h2>
+<h3 id="_18"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>سامانه شامل بیش از بیست سرویس مختلف است که هر کدام نیاز به استقرار، مقیاس‌پذیری و مدیریت دارند. مدیریت دستی این تعداد سرویس در محیط‌های مختلف بسیار پیچیده و خطاپذیر است. سؤال اصلی این بود که از چه ابزاری برای ارکستراسیون و مدیریت این سرویس‌ها استفاده شود تا استقرار، مقیاس‌پذیری و مدیریت خودکار شود؟</p>
+<h3 id="_19"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Kubernetes:</span> سامانه متن‌باز برای ارکستراسیون کانتینرها با اکوسیستم غنی.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Docker Swarm:</span> ابزار ارکستراسیون ساده‌تر از Docker با یادگیری آسان‌تر.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Amazon ECS:</span> سرویس مدیریت‌شده کانتینر در آمازون وب سرویس‌ها با یکپارچه‌سازی عمیق با سایر سرویس‌های AWS.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Amazon EKS:</span> سرویس مدیریت‌شده کوکرنیتس در آمازون وب سرویس‌ها.</p>
+</li>
+</ol>
+<h3 id="_20"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">Amazon EKS انتخاب شد.</span>⁴</p>
+<h3 id="_21"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">اکوسیستم غنی:</span> کوکرنیتس دارای اکوسیستم گسترده‌ای از ابزارها و افزونه‌هاست که نیازهای مختلف از جمله پایش، امنیت و شبکه را پوشش می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری خودکار:</span> کوکرنیتس با استفاده از Horizontal Pod Autoscaler به‌طور خودکار تعداد نمونه‌ها را بر اساس معیارهایی مانند استفاده از CPU تنظیم می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار بدون وقفه:</span> کوکرنیتس با استفاده از Rolling Updates، به‌روزرسانی سرویس‌ها را بدون ایجاد اختلال انجام می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">خودترمیمی:</span> کوکرنیتس به‌طور خودکار کانتینرهای خراب را شناسایی و مجدداً راه‌اندازی می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">خدمات مدیریت‌شده:</span> استفاده از Amazon EKS، مدیریت خوشه را ساده می‌کند و هزینه‌های عملیاتی را کاهش می‌دهد.</p>
+</li>
+</ul>
+<h3 id="_22"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>نیاز به دانش تخصصی کوکرنیتس در تیم عملیات که با آموزش و مستندسازی برطرف شده است.</p>
+</li>
+<li>
+<p>افزایش پیچیدگی پیکربندی اولیه که با استفاده از زیرساخت به‌عنوان کد مدیریت می‌شود.</p>
+</li>
+<li>
+<p>هزینه‌های زیرساختی که با مقیاس‌پذیری خودکار و بهینه‌سازی منابع کنترل می‌شود.</p>
+</li>
+<li>
+<p>نیاز به مدیریت گواهی‌ها و امنیت شبکه که با استفاده از سرویس‌های مدیریت‌شده AWS انجام می‌شود.</p>
+</li>
+</ul>
+<h2 id="adr-_4"><span style="color: #E91E63;">ADR-۰۰۵: انتخاب دروازه رابط برنامه‌نویسی</span><a class="headerlink" href="#adr-_4" title="Permanent link">&para;</a></h2>
+<h3 id="_23"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>سامانه شامل ده سرویس مختلف است که هر کدام نقاط پایانی RESTful دارند. برنامه‌های کاربردی وب و موبایل نیاز به دسترسی به این سرویس‌ها دارند. مدیریت مستقیم دسترسی به تمام سرویس‌ها از برنامه‌های کاربردی، پیچیدگی را افزایش می‌دهد و امنیت را به خطر می‌اندازد. سؤال اصلی این بود که چگونه دسترسی به سرویس‌ها به‌صورت متمرکز، امن و کارآمد مدیریت شود؟</p>
+<h3 id="_24"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Kong:</span> دروازه رابط برنامه‌نویسی مبتنی بر NGINX با قابلیت افزونه‌پذیری و عملکرد بالا.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Spring Cloud Gateway:</span> دروازه رابط برنامه‌نویسی از اکوسیستم Spring با یکپارچه‌سازی عمیق با Spring Boot.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">AWS API Gateway:</span> سرویس مدیریت‌شده در آمازون وب سرویس‌ها با مقیاس‌پذیری خودکار.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Traefik:</span> دروازه رابط برنامه‌نویسی مدرن با پشتیبانی از Kubernetes و کشف خودکار سرویس‌ها.</p>
+</li>
+</ol>
+<h3 id="_25"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">Kong انتخاب شد.</span>⁵</p>
+<h3 id="_26"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">عملکرد بالا:</span> Kong بر اساس NGINX ساخته شده است و عملکرد بسیار بالایی در مدیریت ترافیک دارد که برای سامانه با ترافیک بالا ضروری است.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">افزونه‌پذیری:</span> Kong دارای افزونه‌های متعددی برای احراز هویت، محدودیت نرخ، تبدیل درخواست، ثبت وقایع و غیره است که نیازهای مختلف را پوشش می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیریت متمرکز:</span> Kong امکان مدیریت متمرکز تمام نقاط پایانی را فراهم می‌کند و نیاز به تغییرات در هر سرویس را کاهش می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یکپارچه‌سازی با Kubernetes:</span> Kong با Kubernetes به‌خوبی یکپارچه می‌شود و می‌تواند به عنوان Ingress Controller عمل کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری:</span> Kong به‌صورت افقی مقیاس‌پذیر است و می‌تواند با افزایش ترافیک، نمونه‌های بیشتری اضافه شود.</p>
+</li>
+</ul>
+<h3 id="_27"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>نیاز به پیکربندی اولیه که با استفاده از زیرساخت به‌عنوان کد خودکار شده است.</p>
+</li>
+<li>
+<p>هزینه‌های عملیاتی برای مدیریت دروازه که با مزایای مدیریت متمرکز جبران می‌شود.</p>
+</li>
+<li>
+<p>زمان پاسخ‌گویی اندک اضافی که با معماری کارآمد Kong به حداقل رسیده است.</p>
+</li>
+<li>
+<p>نیاز به مدیریت افزونه‌ها و به‌روزرسانی Kong که با استفاده از Kubernetes خودکار شده است.</p>
+</li>
+</ul>
+<h2 id="adr-_5"><span style="color: #E91E63;">ADR-۰۰۶: انتخاب استراتژی بازیابی در شرایط فاجعه</span><a class="headerlink" href="#adr-_5" title="Permanent link">&para;</a></h2>
+<h3 id="_28"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>سامانه فروشگاه اینترنتی یک سامانه حیاتی است که قطعی آن تأثیر مستقیم بر درآمد و اعتبار برند دارد. هرگونه قطعی طولانی‌مدت در سامانه می‌تواند منجر به از دست دادن مشتریان و کاهش فروش شود. سؤال اصلی این بود که چگونه در برابر حوادث غیرمترقبه مانند قطعی منطقه ابری، بلایای طبیعی یا حملات سایبری، مقاوم‌سازی شود و سامانه بتواند در سریع‌ترین زمان ممکن بازیابی گردد؟</p>
+<h3 id="_29"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار در یک منطقه با پشتیبان‌گیری:</span> فقط در یک منطقه مستقر شود و پشتیبان‌گیری دوره‌ای انجام شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار فعال-غیرفعال:</span> منطقه اصلی فعال و منطقه پشتیبان غیرفعال با قابلیت جابه‌جایی خودکار.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار فعال-فعال:</span> هر دو منطقه فعال و ترافیک بین آنها توزیع شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار در چندین ابر:</span> استفاده از بیش از یک ارائه‌دهنده ابر برای کاهش وابستگی.</p>
+</li>
+</ol>
+<h3 id="_30"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">استقرار فعال-غیرفعال در دو منطقه جغرافیایی مجزا انتخاب شد.</span>⁶</p>
+<h3 id="_31"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هدف زمان بازیابی پانزده دقیقه:</span> این رویکرد با استفاده از خودکارسازی و زیرساخت مناسب، امکان بازیابی سریع را با هزینه مناسب فراهم می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هدف نقطه بازیابی شش ساعت:</span> پشتیبان‌گیری دوره‌ای هر شش ساعت از پایگاه‌های داده اصلی، این هدف را تأمین می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هزینه بهینه:</span> استقرار فعال-فعال هزینه بیشتری دارد و برای نیاز فعلی مناسب نیست. استقرار فعال-غیرفعال تعادل مناسبی بین هزینه و دسترس‌پذیری ارائه می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سادگی مدیریت:</span> مدیریت یک منطقه فعال و یک منطقه پشتیبان ساده‌تر از مدیریت چندین منطقه فعال است.</p>
+</li>
+</ul>
+<h3 id="_32"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>هزینه‌های اضافی برای نگهداری منطقه پشتیبان که نسبت به استقرار تک‌منطقه‌ای بیشتر است اما در برابر هزینه‌های ناشی از قطعی توجیه‌پذیر است.</p>
+</li>
+<li>
+<p>زمان بازیابی پانزده دقیقه‌ای که نیاز به فرآیندهای خودکار و آزمایش دوره‌ای دارد.</p>
+</li>
+<li>
+<p>نیاز به همگام‌سازی داده‌ها بین مناطق که با استفاده از کپی PostgreSQL انجام می‌شود.</p>
+</li>
+<li>
+<p>نیاز به مستندسازی دقیق فرآیند بازیابی و آموزش تیم عملیات.</p>
+</li>
+</ul>
+<h2 id="adr-_6"><span style="color: #E91E63;">ADR-۰۰۷: انتخاب رویکرد پایش و مشاهده‌پذیری</span><a class="headerlink" href="#adr-_6" title="Permanent link">&para;</a></h2>
+<h3 id="_33"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p>سامانه شامل بیش از بیست سرویس است که هر کدام لاگ‌ها، معیارها و ردگیری‌های خود را تولید می‌کنند. بدون یک رویکرد متمرکز برای جمع‌آوری و تحلیل این داده‌ها، شناسایی مشکلات، ریشه‌یابی خطاها و تحلیل عملکرد سامانه بسیار دشوار خواهد بود. سؤال اصلی این بود که چگونه این داده‌ها به‌صورت متمرکز جمع‌آوری، ذخیره و تحلیل شوند تا مشاهده‌پذیری کامل سامانه فراهم شود؟</p>
+<h3 id="_34"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ترکیب ابزارهای متن‌باز:</span> ELK Stack برای لاگ، Prometheus برای معیارها، Grafana برای نمایشگر و Jaeger برای ردیابی.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Datadog:</span> سرویس مدیریت‌شده برای پایش و مشاهده‌پذیری با یکپارچه‌سازی گسترده.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">New Relic:</span> سرویس مدیریت‌شده برای پایش عملکرد برنامه با قابلیت‌های پیشرفته تحلیل.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Splunk:</span> سرویس مدیریت‌شده برای جمع‌آوری و تحلیل داده‌ها با قابلیت‌های جستجوی پیشرفته.</p>
+</li>
+</ol>
+<h3 id="_35"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">ترکیب ابزارهای متن‌باز ELK Stack، Prometheus، Grafana و Jaeger انتخاب شد.</span>⁷</p>
+<h3 id="_36"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هزینه مناسب:</span> ابزارهای متن‌باز هزینه اولیه پایینی دارند و با رشد سامانه می‌توانند مقیاس‌پذیر شوند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">انعطاف‌پذیری:</span> امکان سفارشی‌سازی و یکپارچه‌سازی با سایر ابزارها وجود دارد و وابستگی به یک فروشنده خاص وجود ندارد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">جامعه بزرگ:</span> این ابزارها دارای جامعه کاربری بزرگ و مستندات کامل هستند که پشتیبانی و حل مشکلات را آسان می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مشاهده‌پذیری کامل:</span> ترکیب این ابزارها امکان مشاهده‌پذیری کامل از معیارها، لاگ‌ها و ردگیری‌ها را فراهم می‌کند و دید ۳۶۰ درجه از سامانه ارائه می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یکپارچه‌سازی با Kubernetes:</span> تمام این ابزارها به‌خوبی با Kubernetes یکپارچه می‌شوند و می‌توانند به صورت خودکار سرویس‌های جدید را شناسایی کنند.</p>
+</li>
+</ul>
+<h3 id="_37"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>نیاز به مدیریت و نگهداری زیرساخت این ابزارها که با استفاده از کوکرنیتس خودکار شده است.</p>
+</li>
+<li>
+<p>افزایش پیچیدگی اولیه که با مستندسازی و آموزش برطرف شده است.</p>
+</li>
+<li>
+<p>هزینه‌های ذخیره‌سازی برای نگهداری داده‌های تاریخی که با سیاست‌های نگهداری داده مدیریت می‌شود.</p>
+</li>
+<li>
+<p>نیاز به تخصص در پیکربندی و مدیریت این ابزارها که با آموزش تیم عملیات برطرف شده است.</p>
+</li>
+</ul>
+<h2 id="adr-_7"><span style="color: #E91E63;">ADR-۰۰۸: انتخاب استراتژی مقاوم‌سازی</span><a class="headerlink" href="#adr-_7" title="Permanent link">&para;</a></h2>
+<h3 id="_38"><span style="color: #E91E63;">زمینه و مسئله</span><a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>در معماری ریزخدمات، خرابی یک سرویس می‌تواند به سایر سرویس‌ها سرایت کند و باعث خرابی‌های آبشاری شود. همچنین درخواست‌های بیش از حد به یک سرویس می‌تواند باعث کاهش عملکرد یا از کار افتادن آن شود. سؤال اصلی این بود که چگونه سامانه در برابر خطاها مقاوم‌سازی شود و از خرابی‌های آبشاری جلوگیری گردد؟</p>
+<h3 id="_39"><span style="color: #E91E63;">گزینه‌های بررسی‌شده</span><a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Resilience4J:</span> کتابخانه مقاوم‌سازی برای Java با قابلیت‌های قطع‌کننده مدار، تکرار و محدودکننده نرخ.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Hystrix:</span> کتابخانه مقاوم‌سازی از Netflix با قابلیت‌های مشابه.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">Istio:</span> شبکه سرویس با قابلیت‌های مقاوم‌سازی در سطح شبکه.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ترکیب Resilience4J و Istio:</span> استفاده از Resilience4J در سطح کد و Istio در سطح شبکه.</p>
+</li>
+</ol>
+<h3 id="_40"><span style="color: #E91E63;">تصمیم نهایی</span><a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">ترکیب Resilience4J و Istio انتخاب شد.</span>⁸</p>
+<h3 id="_41"><span style="color: #E91E63;">دلایل تصمیم</span><a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقاوم‌سازی در دو سطح:</span> Resilience4J در سطح کد برای مدیریت دقیق خطاها و Istio در سطح شبکه برای مدیریت کلی ترافیک و مقاوم‌سازی.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یکپارچه‌سازی با Spring Boot:</span> Resilience4J به‌خوبی با Spring Boot یکپارچه می‌شود و پیاده‌سازی الگوهای مقاوم‌سازی را ساده می‌سازد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیریت متمرکز:</span> Istio امکان مدیریت متمرکز سیاست‌های مقاوم‌سازی را در سطح کل سامانه فراهم می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری:</span> هر دو ابزار به‌خوبی مقیاس‌پذیر هستند و می‌توانند با رشد سامانه همراه شوند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مشاهده‌پذیری:</span> Istio قابلیت‌های مشاهده‌پذیری مانند معیارها و ردگیری‌های شبکه را ارائه می‌دهد.</p>
+</li>
+</ul>
+<h3 id="_42"><span style="color: #E91E63;">پیامدهای تصمیم</span><a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>افزایش پیچیدگی در پیکربندی و مدیریت که با زیرساخت به‌عنوان کد خودکار شده است.</p>
+</li>
+<li>
+<p>نیاز به تخصص بیشتر در تیم عملیات برای مدیریت Istio.</p>
+</li>
+<li>
+<p>افزایش اندک در زمان پاسخ‌گویی که با مزایای مقاوم‌سازی جبران می‌شود.</p>
+</li>
+<li>
+<p>نیاز به آزمایش دوره‌ای سناریوهای خرابی برای اطمینان از عملکرد صحیح</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

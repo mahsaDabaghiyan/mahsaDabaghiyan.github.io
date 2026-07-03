@@ -1,0 +1,1447 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../04-solution-strategy/">
+      
+      
+        <link rel="next" href="../05.1-Component-view/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۵. دیدگاه کانتینرها - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۵. دیدگاه کانتینرها
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمودار کانتینرها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تحلیل کامل نمودار کانتینرها
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تحلیل کامل نمودار کانتینرها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        برنامه‌های کاربردی و رابط‌های کاربری
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زیرساخت ارتباطی و امنیت
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سرویس‌های حوزه کسب‌وکار
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سرویس‌های پشتیبانی و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زیرساخت داده و پایش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الگوی ارتباطی کانتینرها
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="الگوی ارتباطی کانتینرها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارتباطات همگام
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارتباطات ناهمگام
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الگوی دسترسی کاربران
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمودار کانتینرها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تحلیل کامل نمودار کانتینرها
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تحلیل کامل نمودار کانتینرها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        برنامه‌های کاربردی و رابط‌های کاربری
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زیرساخت ارتباطی و امنیت
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سرویس‌های حوزه کسب‌وکار
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سرویس‌های پشتیبانی و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        زیرساخت داده و پایش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الگوی ارتباطی کانتینرها
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="الگوی ارتباطی کانتینرها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارتباطات همگام
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارتباطات ناهمگام
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الگوی دسترسی کاربران
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">دیدگاه کانتینرها</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">در این دیدگاه، سامانه به مجموعه‌ای از کانتینرهای اجرایی شامل سرویس‌ها، پایگاه‌های داده، حافظه‌های نهان و دیگر مؤلفه‌های قابل استقرار تجزیه می‌شود.</span></p>
+<p>هر کانتینر، یک واحد قابل استقرار مجزا است که می‌تواند به صورت مستقل اجرا و مقیاس‌پذیر شود. این دیدگاه، دومین سطح از مدل‌سازی C4 را تشکیل می‌دهد و ارتباطات بین کانتینرها را به تصویر می‌کشد.</p>
+<h2 id="_3"><span style="color: #E91E63;">نمودار کانتینرها</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کانتینرها" src="../images/ContainerView-dark.svg" /></p>
+<p><em>نمودار ۲: دیدگاه کانتینرهای سامانه فروشگاه اینترنتی</em></p>
+<h2 id="_4"><span style="color: #E91E63;">تحلیل کامل نمودار کانتینرها</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>سامانه فروشگاه اینترنتی از <span style="color: #1976D2; font-weight: bold;">بیست و دو کانتینر</span> اصلی تشکیل شده است که در ادامه به تفکیک دسته‌بندی و تشریح می‌شوند.</p>
+<h3 id="_5"><span style="color: #E91E63;">برنامه‌های کاربردی و رابط‌های کاربری</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کانتینر</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">برنامه وب</span></td>
+      <td align="center">رابط کاربری برای مشتریان، مدیران و فروشندگان</td>
+      <td align="center">Next.js</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">برنامه موبایل</span></td>
+      <td align="center">برنامه بومی برای مشتریان</td>
+      <td align="center">React Native</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">شبکه توزیع محتوا</span></td>
+      <td align="center">توزیع محتوای ایستا و محافظت در برابر حملات انکار سرویس</td>
+      <td align="center">Cloudflare</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_6"><span style="color: #E91E63;">زیرساخت ارتباطی و امنیت</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کانتینر</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">دروازه رابط برنامه‌نویسی</span></td>
+      <td align="center">مسیریابی درخواست، احراز هویت، محدودیت نرخ</td>
+      <td align="center">Kong</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس احراز هویت</span></td>
+      <td align="center">مدیریت هویت، احراز هویت و کنترل دسترسی مبتنی بر نقش</td>
+      <td align="center">Spring Boot + Keycloak</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">لایه مقاوم‌سازی</span></td>
+      <td align="center">قطع‌کننده مدار، تکرار و محدودیت نرخ</td>
+      <td align="center">Resilience4J + Istio</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_7"><span style="color: #E91E63;">سرویس‌های حوزه کسب‌وکار</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کانتینر</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس کاتالوگ</span></td>
+      <td align="center">مدیریت محصولات و دسته‌بندی‌ها</td>
+      <td align="center">Spring Boot + MongoDB</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span></td>
+      <td align="center">مدیریت موجودی و رزرو</td>
+      <td align="center">Spring Boot + PostgreSQL + Redis</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span></td>
+      <td align="center">مدیریت چرخه حیات سفارشات</td>
+      <td align="center">Spring Boot + PostgreSQL</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس پرداخت</span></td>
+      <td align="center">پردازش پرداخت و یکپارچه‌سازی</td>
+      <td align="center">Spring Boot</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span></td>
+      <td align="center">مدیریت، تأیید و عملکرد فروشندگان</td>
+      <td align="center">Spring Boot + PostgreSQL</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_8"><span style="color: #E91E63;">سرویس‌های پشتیبانی و تحلیل</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کانتینر</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس جستجو</span></td>
+      <td align="center">جستجوی متن کامل و تکمیل خودکار</td>
+      <td align="center">Elasticsearch</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس توصیه‌گر</span></td>
+      <td align="center">توصیه‌های شخصی‌سازی‌شده</td>
+      <td align="center">Python + FastAPI</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس اطلاع‌رسانی</span></td>
+      <td align="center">اطلاع‌رسانی چندکاناله</td>
+      <td align="center">Spring Boot</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس تحلیل</span></td>
+      <td align="center">گزارش‌دهی و تحلیل داده</td>
+      <td align="center">Spring Boot + ClickHouse</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس پشتیبان‌گیری</span></td>
+      <td align="center">پشتیبان‌گیری خودکار و بازیابی در شرایط فاجعه</td>
+      <td align="center">Spring Boot + AWS S3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_9"><span style="color: #E91E63;">زیرساخت داده و پایش</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کانتینر</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کافکا</span></td>
+      <td align="center">پخش رویداد و ارتباطات ناهمگام</td>
+      <td align="center">Apache Kafka</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">حافظه نهان</span></td>
+      <td align="center">حافظه نهان توزیع‌شده</td>
+      <td align="center">Redis</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پایگاه داده اسنادمحور</span></td>
+      <td align="center">ذخیره‌سازی داده‌های محصولات</td>
+      <td align="center">MongoDB</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">موتور جستجو</span></td>
+      <td align="center">جستجوی متن کامل و ذخیره‌سازی لاگ</td>
+      <td align="center">Elasticsearch</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ذخیره‌سازی اشیاء</span></td>
+      <td align="center">ذخیره‌سازی تصاویر و فایل‌های ایستا</td>
+      <td align="center">MinIO</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پایگاه داده رابط‌ای</span></td>
+      <td align="center">ذخیره‌سازی داده‌های تراکنشی</td>
+      <td align="center">PostgreSQL</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پایگاه داده تحلیلی</span></td>
+      <td align="center">ذخیره‌سازی داده‌های تحلیلی</td>
+      <td align="center">ClickHouse</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پشته پایش</span></td>
+      <td align="center">مشاهده‌پذیری و پایش</td>
+      <td align="center">Prometheus + Grafana + Jaeger + ELK</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_10"><span style="color: #E91E63;">الگوی ارتباطی کانتینرها</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">ارتباطات بین کانتینرها از دو الگوی اصلی پیروی می‌کند:</span></p>
+<h3 id="_11"><span style="color: #E91E63;">ارتباطات همگام</span><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>ارتباطات همگام از طریق <span style="color: #1976D2; font-weight: bold;">رابط برنامه‌نویسی RESTful</span> با پروتکل HTTPS انجام می‌شود. این نوع ارتباط برای درخواست‌هایی استفاده می‌شود که نیاز به پاسخ فوری دارند.</p>
+<p><strong>مسیرهای اصلی ارتباطات همگام:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">مبدأ</th>
+<th style="text-align: left;">مقصد</th>
+<th style="text-align: left;">پروتکل</th>
+<th style="text-align: left;">کاربرد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">برنامه وب</td>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">فراخوانی رابط‌های برنامه‌نویسی</td>
+</tr>
+<tr>
+<td style="text-align: left;">برنامه موبایل</td>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">فراخوانی رابط‌های برنامه‌نویسی</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس احراز هویت</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های احراز هویت</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس کاتالوگ</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های کاتالوگ</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس موجودی</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های موجودی</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس سفارش</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های سفارش</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس پرداخت</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های پرداخت</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس فروشنده</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های فروشنده</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس جستجو</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های جستجو</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس توصیه‌گر</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های توصیه‌گر</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس اطلاع‌رسانی</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های اطلاع‌رسانی</td>
+</tr>
+<tr>
+<td style="text-align: left;">دروازه رابط برنامه‌نویسی</td>
+<td style="text-align: left;">سرویس تحلیل</td>
+<td style="text-align: left;">HTTPS/REST</td>
+<td style="text-align: left;">مسیریابی درخواست‌های تحلیل</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12"><span style="color: #E91E63;">ارتباطات ناهمگام</span><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>ارتباطات ناهمگام از طریق <span style="color: #1976D2; font-weight: bold;">آپاچی کافکا</span> انجام می‌شود. این نوع ارتباط برای رویدادهایی استفاده می‌شود که نیازی به پاسخ فوری ندارند.</p>
+<p><strong>مسیرهای اصلی ارتباطات ناهمگام:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">مبدأ</th>
+<th style="text-align: left;">مقصد</th>
+<th style="text-align: left;">رویداد</th>
+<th style="text-align: left;">کاربرد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">سرویس سفارش</td>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">سفارش_ایجاد_شد</td>
+<td style="text-align: left;">انتشار رویداد سفارش جدید</td>
+</tr>
+<tr>
+<td style="text-align: left;">سرویس پرداخت</td>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">پرداخت_موفق</td>
+<td style="text-align: left;">انتشار رویداد پرداخت موفق</td>
+</tr>
+<tr>
+<td style="text-align: left;">سرویس موجودی</td>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">موجودی_تغییر_کرد</td>
+<td style="text-align: left;">انتشار رویداد تغییر موجودی</td>
+</tr>
+<tr>
+<td style="text-align: left;">سرویس کاتالوگ</td>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">محصول_جدید</td>
+<td style="text-align: left;">انتشار رویداد محصول جدید</td>
+</tr>
+<tr>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">سرویس اطلاع‌رسانی</td>
+<td style="text-align: left;">سفارش_ایجاد_شد</td>
+<td style="text-align: left;">مصرف رویداد برای اطلاع‌رسانی</td>
+</tr>
+<tr>
+<td style="text-align: left;">کافکا</td>
+<td style="text-align: left;">سرویس تحلیل</td>
+<td style="text-align: left;">تمام رویدادها</td>
+<td style="text-align: left;">مصرف رویدادها برای تحلیل</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_13"><span style="color: #E91E63;">الگوی دسترسی کاربران</span><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">تمامی کاربران از طریق برنامه وب یا برنامه موبایل به سامانه دسترسی دارند.</span></p>
+<ol>
+<li>
+<p>کاربران از طریق برنامه وب یا برنامه موبایل به سامانه متصل می‌شوند.</p>
+</li>
+<li>
+<p>برنامه وب و برنامه موبایل، محتوای ایستا را از شبکه توزیع محتوا دریافت می‌کنند.</p>
+</li>
+<li>
+<p>برنامه وب و برنامه موبایل، درخواست‌های خود را به دروازه رابط برنامه‌نویسی ارسال می‌کنند.</p>
+</li>
+<li>
+<p>دروازه رابط برنامه‌نویسی، درخواست را پس از احراز هویت و اعمال محدودیت نرخ، به سرویس مناسب مسیریابی می‌کند.</p>
+</li>
+<li>
+<p>هر سرویس، داده‌های مورد نیاز خود را از پایگاه‌های داده مربوطه دریافت یا ذخیره می‌کند.</p>
+</li>
+<li>
+<p>سرویس‌ها در صورت نیاز، رویدادهایی را در کافکا منتشر می‌کنند.</p>
+</li>
+<li>
+<p>سایر سرویس‌ها، رویدادهای مرتبط را از کافکا مصرف کرده و اقدامات لازم را انجام می‌دهند.</p>
+</li>
+<li>
+<p>سرویس‌ها برای افزایش کارایی، از حافظه نهان توزیع‌شده استفاده می‌کنند.</p>
+</li>
+</ol>
+<h2 id="_14"><span style="color: #E91E63;">پانویس‌ها</span><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>¹ واحد قابل استقرار مجزا در معماری نرم‌افزار که می‌تواند به صورت مستقل اجرا و مقیاس‌پذیر شود. هر کانتینر شامل کد برنامه و تمام وابستگی‌های آن است.</p>
+<p>² رابطی برای ارتباط بین سرویس‌ها که از پروتکل HTTP و روش‌های استاندارد مانند GET، POST، PUT و DELETE استفاده می‌کند.</p>
+<p>³ سامانه‌ای توزیع‌شده برای پخش رویداد و پیام‌رسانی با توان عملیاتی بالا، تحمل‌پذیری خطا و تضمین ترتیب پیام‌ها.</p>
+<p>⁴ سامانه‌ای برای ذخیره‌سازی موقت داده‌ها با کارایی بالا که به عنوان لایه کشینگ بین سرویس‌ها و پایگاه داده اصلی قرار می‌گیرد.</p>
+<p>⁵ رویکردی در ذخیره‌سازی داده‌ها که از ساختار سندمحور برای ذخیره‌سازی داده‌های نیمه‌ساختاریافته استفاده می‌کند.</p>
+<p>⁶ موتور جستجوی متن‌باز که قابلیت جستجوی متن کامل، تحلیل و ذخیره‌سازی داده‌های حجیم را فراهم می‌کند.</p>
+<p>⁷ سامانه‌ای برای ذخیره‌سازی اشیاء مانند تصاویر، ویدئوها و فایل‌های ایستا با قابلیت دسترسی از طریق رابط S3.</p>
+<p>⁸ پایگاه داده رابط‌ای که از تراکنش‌های اسیدی و یکپارچگی ارجاعی پشتیبانی می‌کند.</p>
+<p>⁹ پایگاه داده ستون‌گرا که برای اجرای کوئری‌های تحلیلی روی داده‌های حجیم بهینه‌سازی شده است.</p>
+<p>¹⁰ مجموعه‌ای از ابزارها برای پایش، مشاهده‌پذیری و تحلیل عملکرد سامانه شامل جمع‌آوری معیارها، ردیابی توزیع‌شده و تجمیع لاگ.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

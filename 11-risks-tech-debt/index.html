@@ -1,0 +1,2228 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../10-quality-requirements/">
+      
+      
+        <link rel="next" href="../12-glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۱۱. ریسک‌ها - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۱۱. ریسک‌ها
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های فنی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های فنی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rt-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۱: پیچیدگی مدیریت ریزخدمات با بیش از بیست سرویس
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۲: وابستگی حیاتی به کافکا برای رویدادهای اصلی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۳: پیچیدگی مدیریت هفت پایگاه داده مختلف
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-spring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۴: وابستگی به کتابخانه‌ها و نسخه‌های خاص Spring Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های عملیاتی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های عملیاتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ro-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۱: خرابی درگاه پرداخت خارجی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۲: افزایش ناگهانی ترافیک در زمان‌های اوج
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۳: قطعی سرویس‌های ابری AWS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۴: خطای انسانی در استقرار و پیکربندی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های امنیتی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های امنیتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rs-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RS-۰۰۱: نقض امنیتی و دسترسی غیرمجاز به داده‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RS-۰۰۲: حملات انکار سرویس
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های کسب‌وکار
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های کسب‌وکار">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rb-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RB-۰۰۱: از دست دادن اعتماد کاربران به دلیل کاهش عملکرد یا قطعی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rb-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RB-۰۰۲: عدم تطابق با نیازهای متغیر کسب‌وکار
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="بدهی فنی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۱: مستندات ناقص سرویس‌های توصیه‌گر و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۲: پوشش تست‌های یکپارچه‌سازی پایین
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۳: کوئری‌های بهینه‌سازی‌نشده در سرویس‌های موجودی و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۴: نبود داشبورد مدیریتی یکپارچه
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۵: وابستگی به نسخه‌های قدیمی برخی کتابخانه‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۶: مدیریت دستی اسرار و کلیدهای API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        خلاصه ریسک‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اولویت‌بندی ریسک‌ها برای اقدام فوری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های فنی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های فنی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rt-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۱: پیچیدگی مدیریت ریزخدمات با بیش از بیست سرویس
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۲: وابستگی حیاتی به کافکا برای رویدادهای اصلی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۳: پیچیدگی مدیریت هفت پایگاه داده مختلف
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-spring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RT-۰۰۴: وابستگی به کتابخانه‌ها و نسخه‌های خاص Spring Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های عملیاتی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های عملیاتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ro-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۱: خرابی درگاه پرداخت خارجی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۲: افزایش ناگهانی ترافیک در زمان‌های اوج
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۳: قطعی سرویس‌های ابری AWS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ro-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RO-۰۰۴: خطای انسانی در استقرار و پیکربندی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های امنیتی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های امنیتی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rs-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RS-۰۰۱: نقض امنیتی و دسترسی غیرمجاز به داده‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RS-۰۰۲: حملات انکار سرویس
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک‌های کسب‌وکار
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ریسک‌های کسب‌وکار">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rb-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RB-۰۰۱: از دست دادن اعتماد کاربران به دلیل کاهش عملکرد یا قطعی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rb-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریسک RB-۰۰۲: عدم تطابق با نیازهای متغیر کسب‌وکار
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="بدهی فنی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۱: مستندات ناقص سرویس‌های توصیه‌گر و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۲: پوشش تست‌های یکپارچه‌سازی پایین
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۳: کوئری‌های بهینه‌سازی‌نشده در سرویس‌های موجودی و تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۴: نبود داشبورد مدیریتی یکپارچه
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۵: وابستگی به نسخه‌های قدیمی برخی کتابخانه‌ها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#td-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بدهی فنی TD-۰۰۶: مدیریت دستی اسرار و کلیدهای API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        خلاصه ریسک‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اولویت‌بندی ریسک‌ها برای اقدام فوری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">ریسک‌ها و بدهی فنی</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">شناسایی، تحلیل و مدیریت ریسک‌ها و بدهی فنی، بخش حیاتی از هر معماری نرم‌افزار است.</span></p>
+<p>در این بخش، تمام ریسک‌های شناسایی‌شده در معماری سامانه فروشگاه اینترنتی به همراه احتمال وقوع، تأثیر، راه‌حل‌های کاهش ریسک و برنامه‌های مدیریتی تشریح می‌شوند. این ریسک‌ها بر اساس تحلیل عمیق کد معماری C4 و هم‌خوانی با بخش‌های قبلی سند شناسایی شده‌اند. </p>
+<p>ریسک‌های شناسایی‌شده بر اساس چهار حوزه اصلی دسته‌بندی می‌شوند:</p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ریسک‌های فنی:</span> مربوط به فناوری‌ها، ابزارها و پیاده‌سازی</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ریسک‌های عملیاتی:</span> مربوط به اجرا، استقرار و نگهداری</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ریسک‌های امنیتی:</span> مربوط به آسیب‌پذیری‌ها و تهدیدات امنیتی</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">ریسک‌های کسب‌وکار:</span> مربوط به تأثیرات بر کسب‌وکار و کاربران</p>
+</li>
+</ul>
+<h2 id="_3"><span style="color: #E91E63;">ریسک‌های فنی</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="rt-"><span style="color: #E91E63;">ریسک RT-۰۰۱: پیچیدگی مدیریت ریزخدمات با بیش از بیست سرویس</span><a class="headerlink" href="#rt-" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>معماری ریزخدمات شامل ده سرویس کسب‌وکار، هفت پایگاه داده و چندین سرویس زیرساختی مانند کافکا، Redis و Elasticsearch است. این تعداد زیاد سرویس، پیچیدگی مدیریتی بالایی ایجاد می‌کند که می‌تواند منجر به افزایش زمان توسعه، کاهش بهره‌وری و بروز خطاهای ناشی از هماهنگی بین سرویس‌ها شود. همچنین عیب‌یابی در این معماری نیازمند تخصص و ابزارهای پیشرفته است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش پنجم، بخش نهم و تصمیم ADR-۰۰۱</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>انتخاب معماری ریزخدمات بر اساس تصمیم ADR-۰۰۱ در بخش نهم</p>
+</li>
+<li>
+<p>وجود بیش از بیست سرویس مجزا در کد معماری</p>
+</li>
+<li>
+<p>نیاز به هماهنگی بین تیم‌های مختلف توسعه برای هر سرویس</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از کوکرنیتس برای ارکستراسیون و مدیریت یکپارچه سرویس‌ها</p>
+</li>
+<li>
+<p>پیاده‌سازی پشته پایش کامل با پرومتئوس، گرافانا، یاگر و ELK</p>
+</li>
+<li>
+<p>مستندسازی کامل رابط‌های برنامه‌نویسی با OpenAPI</p>
+</li>
+<li>
+<p>استفاده از قراردادهای نسخه‌گذاری سرویس‌ها برای مدیریت تغییرات</p>
+</li>
+<li>
+<p>برگزاری جلسات منظم هماهنگی بین تیم‌های توسعه</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>استقرار کامل پشته پایش تا پایان فاز اول</p>
+</li>
+<li>
+<p>آموزش تیم‌ها در مورد مدیریت ریزخدمات در ماه اول</p>
+</li>
+<li>
+<p>ایجاد کتابچه راهنمای عیب‌یابی سرویس‌ها در ماه دوم</p>
+</li>
+</ul>
+<h3 id="rt-_1"><span style="color: #E91E63;">ریسک RT-۰۰۲: وابستگی حیاتی به کافکا برای رویدادهای اصلی</span><a class="headerlink" href="#rt-_1" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>ارتباطات ناهمگام بین سرویس‌ها به‌طور کامل به کافکا وابسته است. خرابی یا کاهش عملکرد کافکا می‌تواند بر رویدادهای حیاتی مانند سفارش_ایجاد_شد، پرداخت_موفق و موجودی_تغییر_کرد تأثیر بگذارد. این رویدادها برای عملکرد صحیح سرویس‌های سفارش، پرداخت، موجودی، اطلاع‌رسانی و تحلیل حیاتی هستند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش چهارم، بخش نهم و تصمیم ADR-۰۰۲</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>انتخاب کافکا بر اساس تصمیم ADR-۰۰۲ در بخش نهم</p>
+</li>
+<li>
+<p>وابستگی پنج سرویس اصلی به کافکا برای پردازش رویدادها</p>
+</li>
+<li>
+<p>حجم بالای رویدادها در زمان‌های اوج مصرف</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بسیار بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استقرار کافکا با سه نمونه و ذخیره‌سازی ۱۰۰ گیگابایت</p>
+</li>
+<li>
+<p>پایش مداوم معیارهای کافکا از جمله تأخیر، نرخ تولید و مصرف</p>
+</li>
+<li>
+<p>طراحی مکانیزم‌های جایگزین برای پردازش رویدادها در صورت خرابی موقت</p>
+</li>
+<li>
+<p>اجرای دوره‌ای تست‌های خرابی کافکا</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>پایش شبانه‌روزی معیارهای کافکا در داشبورد گرافانا</p>
+</li>
+<li>
+<p>برگزاری تمرین‌های دوره‌ای بازیابی از خرابی کافکا</p>
+</li>
+<li>
+<p>ایجاد مستندات بازیابی سریع کافکا</p>
+</li>
+</ul>
+<h3 id="rt-_2"><span style="color: #E91E63;">ریسک RT-۰۰۳: پیچیدگی مدیریت هفت پایگاه داده مختلف</span><a class="headerlink" href="#rt-_2" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>استفاده از هفت پایگاه داده مختلف شامل PostgreSQL، MongoDB، Elasticsearch، Redis، ClickHouse، Kafka و MinIO، پیچیدگی مدیریتی بالایی ایجاد می‌کند. هر پایگاه داده نیاز به تخصص، پیکربندی و نگهداری جداگانه دارد. مدیریت مهاجرت داده‌ها و همگام‌سازی بین پایگاه‌های داده نیز چالش‌برانگیز است. به‌ویژه مدیریت تراکنش‌های توزیع‌شده بین PostgreSQL، MongoDB و ClickHouse با الگوی SAGA نیازمند دقت بالایی است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش چهارم، بخش نهم و تصمیم ADR-۰۰۳</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>انتخاب چندشکلی پایگاه داده بر اساس تصمیم ADR-۰۰۳ در بخش نهم</p>
+</li>
+<li>
+<p>نیاز به تخصص در هفت پایگاه داده مختلف</p>
+</li>
+<li>
+<p>پیچیدگی مدیریت تراکنش‌های توزیع‌شده</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از سرویس‌های مدیریت‌شده ابری برای پایگاه‌های داده اصلی</p>
+</li>
+<li>
+<p>خودکارسازی پشتیبان‌گیری و بازیابی با استفاده از سرویس پشتیبان‌گیری</p>
+</li>
+<li>
+<p>مستندسازی کامل پیکربندی و مدیریت هر پایگاه داده</p>
+</li>
+<li>
+<p>ایجاد تیم تخصصی پایگاه داده</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>مهاجرت به سرویس‌های مدیریت‌شده AWS تا پایان فاز اول</p>
+</li>
+<li>
+<p>آموزش دو نفر از اعضای تیم به عنوان متخصص پایگاه داده</p>
+</li>
+<li>
+<p>ایجاد کتابخانه پرس‌وجوهای بهینه برای هر پایگاه داده</p>
+</li>
+</ul>
+<h3 id="rt-spring-boot"><span style="color: #E91E63;">ریسک RT-۰۰۴: وابستگی به کتابخانه‌ها و نسخه‌های خاص Spring Boot</span><a class="headerlink" href="#rt-spring-boot" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>سرویس‌های اصلی سامانه با Spring Boot و کتابخانه‌های مرتبط مانند Spring Data JPA، Spring Security، Spring Cloud و Spring Kafka پیاده‌سازی شده‌اند. وابستگی به نسخه‌های خاص این کتابخانه‌ها و نیاز به به‌روزرسانی هماهنگ آنها، ریسک بروز مشکلات سازگاری را ایجاد می‌کند. همچنین وابستگی به نسخه‌های قدیمی برخی کتابخانه‌ها می‌تواند به آسیب‌پذیری‌های امنیتی منجر شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش چهارم، بخش پنجم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده گسترده از اکوسیستم Spring Boot</p>
+</li>
+<li>
+<p>نیاز به به‌روزرسانی هماهنگ کتابخانه‌ها</p>
+</li>
+<li>
+<p>وجود وابستگی‌های متن‌باز متعدد</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>به‌روزرسانی منظم وابستگی‌ها در هر sprint</p>
+</li>
+<li>
+<p>استفاده از ابزارهای تحلیل وابستگی مانند Dependabot</p>
+</li>
+<li>
+<p>تست سازگاری پس از هر به‌روزرسانی</p>
+</li>
+<li>
+<p>مستندسازی نسخه‌های مورد استفاده</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>اسکن هفتگی وابستگی‌ها با Dependabot</p>
+</li>
+<li>
+<p>به‌روزرسانی وابستگی‌های امنیتی در کمتر از ۴۸ ساعت</p>
+</li>
+<li>
+<p>برگزاری تست‌های سازگاری پس از هر به‌روزرسانی</p>
+</li>
+</ul>
+<h2 id="_4"><span style="color: #E91E63;">ریسک‌های عملیاتی</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="ro-"><span style="color: #E91E63;">ریسک RO-۰۰۱: خرابی درگاه پرداخت خارجی</span><a class="headerlink" href="#ro-" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>سامانه برای پردازش پرداخت‌ها به درگاه پرداخت خارجی وابسته است. خرابی یا قطعی درگاه پرداخت می‌تواند به توقف فرآیند ثبت سفارش و کاهش فروش منجر شود. این ریسک به دلیل تأثیر مستقیم بر درآمد، از بالاترین اولویت برخوردار است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش سوم، بخش هشتم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>وابستگی حیاتی به درگاه پرداخت خارجی</p>
+</li>
+<li>
+<p>عدم کنترل بر زمان دسترس‌پذیری و عملکرد درگاه پرداخت</p>
+</li>
+<li>
+<p>نیاز به به‌روزرسانی هماهنگ با تغییرات درگاه پرداخت</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بسیار بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>پیاده‌سازی قطع‌کننده مدار با Resilience4J</p>
+</li>
+<li>
+<p>استفاده از الگوی تکرار با پشتیبان نمایی</p>
+</li>
+<li>
+<p>انتخاب حداقل دو درگاه پرداخت به عنوان پشتیبان</p>
+</li>
+<li>
+<p>ایجاد قرارداد سطح خدمات با ارائه‌دهنده درگاه پرداخت</p>
+</li>
+<li>
+<p>ذخیره‌سازی موقت درخواست‌های پرداخت در کافکا</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>پیاده‌سازی قطع‌کننده مدار در سرویس پرداخت تا پایان ماه اول</p>
+</li>
+<li>
+<p>عقد قرارداد با درگاه پرداخت دوم تا پایان ماه دوم</p>
+</li>
+<li>
+<p>تست دوره‌ای سناریوی خرابی درگاه پرداخت</p>
+</li>
+</ul>
+<h3 id="ro-_1"><span style="color: #E91E63;">ریسک RO-۰۰۲: افزایش ناگهانی ترافیک در زمان‌های اوج</span><a class="headerlink" href="#ro-_1" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>در زمان‌های خاص مانند حراج‌های فصلی، ترافیک سامانه می‌تواند به‌طور ناگهانی چندین برابر شود. سرویس‌های کاتالوگ و جستجو بیشترین افزایش بار را تجربه می‌کنند. عدم آمادگی برای این سناریو می‌تواند به کاهش عملکرد و از کار افتادن سامانه منجر شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش دوم، بخش دهم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>ماهیت فصلی فروشگاه‌های اینترنتی</p>
+</li>
+<li>
+<p>برگزاری حراج‌ها و تخفیف‌های ویژه</p>
+</li>
+<li>
+<p>عدم پیش‌بینی دقیق میزان ترافیک هر سرویس</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از مقیاس‌کننده خودکار پاد افقی در کوکرنیتس</p>
+</li>
+<li>
+<p>انجام تست‌های بار دوره‌ای با JMeter</p>
+</li>
+<li>
+<p>طراحی معماری با قابلیت مقیاس‌پذیری تا ۱۰ برابر</p>
+</li>
+<li>
+<p>استفاده از حافظه نهان توزیع‌شده و شبکه توزیع محتوا</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>اجرای تست‌های بار قبل از هر حراج فصلی</p>
+</li>
+<li>
+<p>تنظیم آستانه‌های مقیاس‌پذیری در مقیاس‌کننده خودکار پاد افقی</p>
+</li>
+<li>
+<p>پیش‌بینی و تخصیص منابع اضافی در زمان‌های اوج</p>
+</li>
+</ul>
+<h3 id="ro-aws"><span style="color: #E91E63;">ریسک RO-۰۰۳: قطعی سرویس‌های ابری AWS</span><a class="headerlink" href="#ro-aws" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>سامانه به‌طور کامل بر روی AWS مستقر شده است. هرگونه قطعی یا اختلال در سرویس‌های ابری مانند EKS، RDS، S3 یا EC2 می‌تواند باعث از کار افتادن سامانه شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش هفتم، بخش نهم و تصمیم ADR-۰۰۶</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>استقرار کامل بر روی AWS</p>
+</li>
+<li>
+<p>عدم استفاده از ارائه‌دهنده ابر جایگزین</p>
+</li>
+<li>
+<p>وابستگی به سرویس‌های مدیریت‌شده AWS</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> کم</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بسیار بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استقرار فعال-غیرفعال در دو منطقه us-east-1 و us-west-2</p>
+</li>
+<li>
+<p>هدف زمان بازیابی پانزده دقیقه</p>
+</li>
+<li>
+<p>هدف نقطه بازیابی شش ساعت</p>
+</li>
+<li>
+<p>پشتیبان‌گیری دوره‌ای در S3</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>آزمایش دوره‌ای جابه‌جایی به منطقه پشتیبان</p>
+</li>
+<li>
+<p>به‌روزرسانی مستندات بازیابی</p>
+</li>
+<li>
+<p>برگزاری تمرین‌های دوره‌ای بازیابی</p>
+</li>
+</ul>
+<h3 id="ro-_2"><span style="color: #E91E63;">ریسک RO-۰۰۴: خطای انسانی در استقرار و پیکربندی</span><a class="headerlink" href="#ro-_2" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>وجود بیش از بیست سرویس و هفت پایگاه داده، احتمال خطای انسانی در فرآیند استقرار و پیکربندی را افزایش می‌دهد. یک اشتباه در فایل‌های پیکربندی کوکرنیتس، پیکربندی سرویس‌ها یا مدیریت اسرار می‌تواند به خرابی سرویس‌ها منجر شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش هفتم، بخش هشتم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>تعداد زیاد سرویس‌ها و پیکربندی‌ها</p>
+</li>
+<li>
+<p>پیچیدگی مدیریت اسرار و گواهی‌ها</p>
+</li>
+<li>
+<p>نیاز به هماهنگی بین تیم‌های مختلف</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از زیرساخت به‌عنوان کد با Terraform</p>
+</li>
+<li>
+<p>پیاده‌سازی یکپارچه‌سازی و استقرار پیوسته با GitHub Actions</p>
+</li>
+<li>
+<p>استفاده از Vault برای مدیریت اسرار</p>
+</li>
+<li>
+<p>استقرار در محیط پیش‌تولید قبل از تولید</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>پیاده‌سازی یکپارچه‌سازی و استقرار پیوسته تا پایان ماه اول</p>
+</li>
+<li>
+<p>ایجاد محیط پیش‌تولید برای تست استقرار</p>
+</li>
+<li>
+<p>مستندسازی فرآیندهای استقرار</p>
+</li>
+</ul>
+<h2 id="_5"><span style="color: #E91E63;">ریسک‌های امنیتی</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="rs-"><span style="color: #E91E63;">ریسک RS-۰۰۱: نقض امنیتی و دسترسی غیرمجاز به داده‌ها</span><a class="headerlink" href="#rs-" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>سامانه شامل داده‌های حساس کاربران از جمله اطلاعات شخصی، آدرس‌ها، تاریخچه خرید و اطلاعات پرداخت است. هرگونه نقض امنیتی می‌تواند به سرقت داده‌ها، از دست دادن اعتماد کاربران و پیگرد قانونی منجر شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش هشتم، بخش نهم و تصمیم ADR-۰۰۷</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>وجود داده‌های حساس کاربران در سامانه</p>
+</li>
+<li>
+<p>وابستگی به Keycloak برای احراز هویت</p>
+</li>
+<li>
+<p>قرارگیری سامانه در معرض حملات اینترنتی</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> کم</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بسیار بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از Keycloak با OAuth2 و OpenID Connect</p>
+</li>
+<li>
+<p>رمزنگاری تمام ارتباطات با TLS 1.3</p>
+</li>
+<li>
+<p>ذخیره‌سازی رمزنگاری‌شده داده‌های حساس</p>
+</li>
+<li>
+<p>ثبت تمام رویدادهای امنیتی در ثبت‌کننده بازرسی</p>
+</li>
+<li>
+<p>اجرای دوره‌ای تست نفوذ و اسکن آسیب‌پذیری‌ها</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>اجرای تست نفوذ هر شش ماه</p>
+</li>
+<li>
+<p>اسکن خودکار آسیب‌پذیری‌ها با OWASP ZAP به‌صورت هفتگی</p>
+</li>
+<li>
+<p>پایش شبانه‌روزی لاگ‌های امنیتی در پشته ELK</p>
+</li>
+<li>
+<p>به‌روزرسانی مستمر وابستگی‌های امنیتی</p>
+</li>
+</ul>
+<h3 id="rs-_1"><span style="color: #E91E63;">ریسک RS-۰۰۲: حملات انکار سرویس</span><a class="headerlink" href="#rs-_1" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>سامانه در معرض حملات انکار سرویس قرار دارد که می‌تواند با ارسال حجم بالای درخواست، سامانه را از کار بیندازد. این حملات تأثیر مستقیمی بر در دسترس بودن سامانه دارند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش هشتم، بخش دهم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>قرارگیری سامانه در معرض اینترنت</p>
+</li>
+<li>
+<p>وجود منابع محدود در هر سرویس</p>
+</li>
+<li>
+<p>عدم وجود لایه‌های محافظتی کافی</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>استفاده از محدودکننده نرخ در Kong</p>
+</li>
+<li>
+<p>استفاده از Cloudflare برای محافظت در برابر حملات انکار سرویس</p>
+</li>
+<li>
+<p>پیاده‌سازی قطع‌کننده مدار با Resilience4J</p>
+</li>
+<li>
+<p>استفاده از دیوار آتش برنامه وب</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>پایش مداوم الگوهای ترافیکی</p>
+</li>
+<li>
+<p>تنظیم محدودیت‌های نرخ مناسب</p>
+</li>
+<li>
+<p>همکاری با تیم امنیت برای تحلیل حملات</p>
+</li>
+</ul>
+<h2 id="_6"><span style="color: #E91E63;">ریسک‌های کسب‌وکار</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="rb-"><span style="color: #E91E63;">ریسک RB-۰۰۱: از دست دادن اعتماد کاربران به دلیل کاهش عملکرد یا قطعی</span><a class="headerlink" href="#rb-" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>هرگونه قطعی طولانی‌مدت، کاهش عملکرد یا نقض امنیتی می‌تواند به از دست دادن اعتماد کاربران منجر شود. کاربران ناراضی ممکن است به رقبا مهاجرت کنند که تأثیر مستقیمی بر درآمد و اعتبار برند خواهد داشت.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش دهم، بخش هفتم</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>رقابت شدید در حوزه فروشگاه‌های اینترنتی</p>
+</li>
+<li>
+<p>حساسیت کاربران به عملکرد و امنیت</p>
+</li>
+<li>
+<p>تأثیر مستقیم بر درآمد و اعتبار برند</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بسیار بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>تأمین دسترس‌پذیری ۹۹/۹۹ درصد</p>
+</li>
+<li>
+<p>کاهش زمان پاسخ‌گویی به کمتر از ۲۰۰ میلی‌ثانیه</p>
+</li>
+<li>
+<p>تأمین امنیت کامل داده‌های کاربران</p>
+</li>
+<li>
+<p>ایجاد کانال‌های ارتباطی شفاف با کاربران</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>پایش مستمر رضایت کاربران با نظرسنجی</p>
+</li>
+<li>
+<p>تحلیل نرخ بازگشت مشتری و نرخ تبدیل</p>
+</li>
+<li>
+<p>پاسخگویی سریع به شکایات و مشکلات</p>
+</li>
+</ul>
+<h3 id="rb-_1"><span style="color: #E91E63;">ریسک RB-۰۰۲: عدم تطابق با نیازهای متغیر کسب‌وکار</span><a class="headerlink" href="#rb-_1" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح ریسک:</span></p>
+<p>تغییرات سریع در نیازهای کسب‌وکار ممکن است باعث شود معماری فعلی پاسخگوی نیازهای جدید نباشد. انعطاف‌ناپذیری معماری می‌تواند به تأخیر در ارائه ویژگی‌های جدید و از دست دادن فرصت‌های بازار منجر شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">ارجاع به بخش‌های مرتبط:</span> بخش دوم، بخش نهم و تصمیم ADR-۰۰۱</p>
+<p><span style="color: #1976D2; font-weight: bold;">ریشه‌های ریسک:</span></p>
+<ul>
+<li>
+<p>تغییرات سریع در بازار فروشگاه‌های اینترنتی</p>
+</li>
+<li>
+<p>نیازهای متغیر کاربران و فروشندگان</p>
+</li>
+<li>
+<p>ظهور فناوری‌ها و رقبای جدید</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">احتمال وقوع:</span> متوسط</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> بالا</p>
+<p><span style="color: #1976D2; font-weight: bold;">راه‌حل‌های کاهش ریسک:</span></p>
+<ul>
+<li>
+<p>طراحی معماری با قابلیت توسعه‌پذیری بالا</p>
+</li>
+<li>
+<p>استفاده از معماری ریزخدمات برای تغییرات مستقل</p>
+</li>
+<li>
+<p>نگهداشت‌پذیری بالا با پوشش تست و مستندسازی</p>
+</li>
+<li>
+<p>برگزاری جلسات منظم با ذی‌نفعان کسب‌وکار</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه مدیریت:</span></p>
+<ul>
+<li>
+<p>بازنگری دوره‌ای معماری هر شش ماه</p>
+</li>
+<li>
+<p>تحلیل نیازهای کسب‌وکار در هر فصل</p>
+</li>
+<li>
+<p>برنامه‌ریزی برای تکامل معماری در افق ۳ تا ۵ سال</p>
+</li>
+</ul>
+<h2 id="_7"><span style="color: #E91E63;">بدهی فنی</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">بدهی فنی، مجموعه‌ای از انتخاب‌های طراحی و پیاده‌سازی است که در کوتاه‌مدت مزایایی دارند اما در بلندمدت هزینه‌هایی را ایجاد می‌کنند.</span></p>
+<h3 id="td-"><span style="color: #E91E63;">بدهی فنی TD-۰۰۱: مستندات ناقص سرویس‌های توصیه‌گر و تحلیل</span><a class="headerlink" href="#td-" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> سرویس‌های توصیه‌گر و تحلیل که با Python پیاده‌سازی شده‌اند، مستندات کاملی ندارند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> تمرکز بر پیاده‌سازی سریع در فاز اول.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> افزایش زمان آموزش تیم‌های جدید و کاهش بهره‌وری.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> تکمیل مستندات تا پایان فاز اول.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> بالا</p>
+<hr />
+<h3 id="td-_1"><span style="color: #E91E63;">بدهی فنی TD-۰۰۲: پوشش تست‌های یکپارچه‌سازی پایین</span><a class="headerlink" href="#td-_1" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> پوشش تست‌های یکپارچه‌سازی در سرویس‌های پرداخت، سفارش و موجودی پایین است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> محدودیت زمانی در فاز اول توسعه.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> افزایش ریسک بروز خطا در استقرارهای جدید.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> افزایش پوشش تست‌ها به ۸۰ درصد تا پایان فاز دوم.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> بالا</p>
+<hr />
+<h3 id="td-_2"><span style="color: #E91E63;">بدهی فنی TD-۰۰۳: کوئری‌های بهینه‌سازی‌نشده در سرویس‌های موجودی و تحلیل</span><a class="headerlink" href="#td-_2" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> برخی کوئری‌های سرویس‌های موجودی و تحلیل بهینه نیستند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> تمرکز بر سرعت پیاده‌سازی در فاز اول.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> افزایش زمان پاسخ‌گویی در بارهای بالا.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> بازنگری و بهینه‌سازی کوئری‌ها در فاز دوم.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> متوسط</p>
+<hr />
+<h3 id="td-_3"><span style="color: #E91E63;">بدهی فنی TD-۰۰۴: نبود داشبورد مدیریتی یکپارچه</span><a class="headerlink" href="#td-_3" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> داشبورد مدیریتی جامع برای پایش و مدیریت تمام سرویس‌ها وجود ندارد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> اولویت‌بندی پایین در فاز اول.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> کاهش کارایی تیم عملیات در عیب‌یابی.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> پیاده‌سازی داشبورد مدیریتی یکپارچه با Grafana تا پایان فاز دوم.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> متوسط</p>
+<hr />
+<h3 id="td-_4"><span style="color: #E91E63;">بدهی فنی TD-۰۰۵: وابستگی به نسخه‌های قدیمی برخی کتابخانه‌ها</span><a class="headerlink" href="#td-_4" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> برخی کتابخانه‌های استفاده‌شده در سرویس‌ها مانند Spring Boot، نسخه‌های قدیمی دارند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> عدم به‌روزرسانی منظم وابستگی‌ها.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> افزایش ریسک امنیتی، کاهش عملکرد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> به‌روزرسانی وابستگی‌ها در هر sprint با تست‌های سازگاری کامل.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> متوسط</p>
+<hr />
+<h3 id="td-api"><span style="color: #E91E63;">بدهی فنی TD-۰۰۶: مدیریت دستی اسرار و کلیدهای API</span><a class="headerlink" href="#td-api" title="Permanent link">&para;</a></h3>
+<p><span style="color: #1976D2; font-weight: bold;">شرح:</span> مدیریت اسرار و کلیدهای API به‌صورت دستی انجام می‌شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">علت:</span> زمان‌بر بودن پیاده‌سازی کامل Vault.</p>
+<p><span style="color: #1976D2; font-weight: bold;">تأثیر:</span> افزایش ریسک افشای اسرار.</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه رفع:</span> پیاده‌سازی کامل Vault برای مدیریت اسرار تا پایان فاز دوم.</p>
+<p><span style="color: #1976D2; font-weight: bold;">اولویت:</span> بالا</p>
+<h2 id="_8"><span style="color: #E91E63;">خلاصه ریسک‌ها</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">شناسه</th>
+      <th align="center">عنوان ریسک</th>
+      <th align="center">دسته</th>
+      <th align="center">احتمال</th>
+      <th align="center">تأثیر</th>
+      <th align="center">اولویت</th>
+      <th align="center">ارجاع به بخش</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">RT-۰۰۱</td>
+      <td align="center">پیچیدگی مدیریت ریزخدمات</td>
+      <td align="center">فنی</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بخش ۵، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">RT-۰۰۲</td>
+      <td align="center">وابستگی حیاتی به کافکا</td>
+      <td align="center">فنی</td>
+      <td align="center">متوسط</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بخش ۴، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">RT-۰۰۳</td>
+      <td align="center">پیچیدگی مدیریت هفت پایگاه داده</td>
+      <td align="center">فنی</td>
+      <td align="center">متوسط</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بخش ۴، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">RT-۰۰۴</td>
+      <td align="center">وابستگی به کتابخانه‌های Spring</td>
+      <td align="center">فنی</td>
+      <td align="center">متوسط</td>
+      <td align="center">متوسط</td>
+      <td align="center">متوسط</td>
+      <td align="center">بخش ۴، ۵</td>
+    </tr>
+    <tr>
+      <td align="center">RO-۰۰۱</td>
+      <td align="center">خرابی درگاه پرداخت</td>
+      <td align="center">عملیاتی</td>
+      <td align="center">متوسط</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بخش ۳، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">RO-۰۰۲</td>
+      <td align="center">افزایش ناگهانی ترافیک</td>
+      <td align="center">عملیاتی</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بخش ۲، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">RO-۰۰۳</td>
+      <td align="center">قطعی سرویس ابری AWS</td>
+      <td align="center">عملیاتی</td>
+      <td align="center">کم</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">RO-۰۰۴</td>
+      <td align="center">خطای انسانی در استقرار</td>
+      <td align="center">عملیاتی</td>
+      <td align="center">متوسط</td>
+      <td align="center">متوسط</td>
+      <td align="center">متوسط</td>
+      <td align="center">بخش ۷، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">RS-۰۰۱</td>
+      <td align="center">نقض امنیتی</td>
+      <td align="center">امنیتی</td>
+      <td align="center">کم</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بخش ۸، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">RS-۰۰۲</td>
+      <td align="center">حملات انکار سرویس</td>
+      <td align="center">امنیتی</td>
+      <td align="center">متوسط</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بخش ۸، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">RB-۰۰۱</td>
+      <td align="center">از دست دادن اعتماد کاربران</td>
+      <td align="center">کسب‌وکار</td>
+      <td align="center">متوسط</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بسیار بالا</td>
+      <td align="center">بخش ۱۰، ۷</td>
+    </tr>
+    <tr>
+      <td align="center">RB-۰۰۲</td>
+      <td align="center">عدم تطابق با نیازهای کسب‌وکار</td>
+      <td align="center">کسب‌وکار</td>
+      <td align="center">متوسط</td>
+      <td align="center">بالا</td>
+      <td align="center">بالا</td>
+      <td align="center">بخش ۲، ۹</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_9"><span style="color: #E91E63;">اولویت‌بندی ریسک‌ها برای اقدام فوری</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">اولویت</th>
+      <th align="center">شناسه</th>
+      <th align="center">عنوان ریسک</th>
+      <th align="center">زمان اقدام</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">۱</td>
+      <td align="center">RO-۰۰۱</td>
+      <td align="center">خرابی درگاه پرداخت</td>
+      <td align="center">بلافاصله</td>
+    </tr>
+    <tr>
+      <td align="center">۲</td>
+      <td align="center">RS-۰۰۱</td>
+      <td align="center">نقض امنیتی</td>
+      <td align="center">بلافاصله</td>
+    </tr>
+    <tr>
+      <td align="center">۳</td>
+      <td align="center">RT-۰۰۲</td>
+      <td align="center">وابستگی حیاتی به کافکا</td>
+      <td align="center">یک هفته</td>
+    </tr>
+    <tr>
+      <td align="center">۴</td>
+      <td align="center">RB-۰۰۱</td>
+      <td align="center">از دست دادن اعتماد کاربران</td>
+      <td align="center">یک هفته</td>
+    </tr>
+    <tr>
+      <td align="center">۵</td>
+      <td align="center">RO-۰۰۲</td>
+      <td align="center">افزایش ناگهانی ترافیک</td>
+      <td align="center">دو هفته</td>
+    </tr>
+    <tr>
+      <td align="center">۶</td>
+      <td align="center">RT-۰۰۱</td>
+      <td align="center">پیچیدگی مدیریت ریزخدمات</td>
+      <td align="center">یک ماه</td>
+    </tr>
+    <tr>
+      <td align="center">۷</td>
+      <td align="center">RO-۰۰۳</td>
+      <td align="center">قطعی سرویس ابری AWS</td>
+      <td align="center">یک ماه</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_10"><span style="color: #E91E63;">پانویس‌ها</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">¹ بدهی فنی</span>
+مجموعه‌ای از انتخاب‌های طراحی و پیاده‌سازی که در کوتاه‌مدت مزایایی دارند اما در بلندمدت هزینه‌هایی را ایجاد می‌کنند و نیاز به بازپرداخت دارند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">² تست نفوذ</span>
+فرآیند شبیه‌سازی حملات سایبری به سامانه برای شناسایی آسیب‌پذیری‌های امنیتی و ارزیابی سطح امنیت سامانه.</p>
+<p><span style="color: #1976D2; font-weight: bold;">³ OWASP ZAP</span>
+ابزار متن‌باز برای اسکن آسیب‌پذیری‌های امنیتی در برنامه‌های وب که توسط پروژه OWASP توسعه داده شده است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁴ دیوار آتش برنامه وب</span>
+سیستمی برای شناسایی و مسدودسازی درخواست‌های مخرب به برنامه‌های وب که به عنوان لایه محافظتی بین کاربر و برنامه قرار می‌گیرد.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁵ مقیاس‌کننده خودکار پاد افقی</span>
+مؤلفه‌ای در کوکرنیتس که به‌طور خودکار تعداد پادها را بر اساس معیارهایی مانند استفاده از CPU یا معیارهای سفارشی تنظیم می‌کند.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

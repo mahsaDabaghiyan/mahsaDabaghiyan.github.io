@@ -1,0 +1,1062 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../11-risks-tech-debt/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۱۲. واژه‌نامه - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۱۲. واژه‌نامه
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        واژه‌نامه اصطلاحات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        واژه‌نامه اصطلاحات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">واژه‌نامه</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">واژه‌نامه، مجموعه‌ای از تعاریف اصطلاحات تخصصی و کلمات کلیدی است که در طول سند معماری به کار رفته‌اند.</span></p>
+<p>این بخش به مخاطبان سند کمک می‌کند تا درک مشترکی از مفاهیم و اصطلاحات فنی داشته باشند. واژه‌نامه بر اساس حروف الفبا مرتب شده است و شامل توضیحات کامل هر اصطلاح به همراه ارجاع به بخش‌های مرتبط می‌باشد.</p>
+<h2 id="_3"><span style="color: #E91E63;">واژه‌نامه اصطلاحات</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">ردیف</th>
+      <th align="center">اصطلاح فارسی</th>
+      <th align="center">اصطلاح انگلیسی</th>
+      <th align="center">تعریف</th>
+      <th align="center">ارجاع به بخش</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">۱</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">آمازون وب سرویس‌ها</span></td>
+      <td align="center">Amazon Web Services</td>
+      <td align="center">مجموعه‌ای از سرویس‌های ابری ارائه‌شده توسط آمازون که شامل محاسبات، ذخیره‌سازی، پایگاه داده و سایر سرویس‌های زیرساختی است.</td>
+      <td align="center">بخش ۴، ۷</td>
+    </tr>
+    <tr>
+      <td align="center">۲</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">آسیب‌پذیری‌های امنیتی ده‌گانه OWASP</span></td>
+      <td align="center">OWASP Top 10</td>
+      <td align="center">لیستی از ده آسیب‌پذیری بحرانی امنیتی در برنامه‌های وب که توسط پروژه OWASP منتشر می‌شود و به عنوان مرجع استاندارد امنیت وب شناخته می‌شود.</td>
+      <td align="center">بخش ۲، ۸، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">۳</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">بدهی فنی</span></td>
+      <td align="center">Technical Debt</td>
+      <td align="center">مجموعه‌ای از انتخاب‌های طراحی و پیاده‌سازی که در کوتاه‌مدت مزایایی دارند اما در بلندمدت هزینه‌هایی را ایجاد می‌کنند و نیاز به بازپرداخت دارند.</td>
+      <td align="center">بخش ۱۱</td>
+    </tr>
+    <tr>
+      <td align="center">۴</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">به‌روزرسانی چرخشی</span></td>
+      <td align="center">Rolling Update</td>
+      <td align="center">روشی برای به‌روزرسانی برنامه‌ها در کوکرنیتس که با جایگزینی تدریجی نمونه‌های قدیمی با نمونه‌های جدید، بدون ایجاد وقفه در سرویس انجام می‌شود.</td>
+      <td align="center">بخش ۷</td>
+    </tr>
+    <tr>
+      <td align="center">۵</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پایگاه داده اسنادمحور</span></td>
+      <td align="center">Document Database</td>
+      <td align="center">نوعی پایگاه داده که داده‌ها را به‌صورت اسناد ساختاریافته ذخیره می‌کند و برای داده‌های نیمه‌ساختاریافته مناسب است.</td>
+      <td align="center">بخش ۴، ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۶</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پایگاه داده رابط‌ای</span></td>
+      <td align="center">Relational Database</td>
+      <td align="center">نوعی پایگاه داده که داده‌ها را در قالب جداول با سطرها و ستون‌ها ذخیره می‌کند و از تراکنش‌های اسیدی پشتیبانی می‌کند.</td>
+      <td align="center">بخش ۴، ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۷</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">تست نفوذ</span></td>
+      <td align="center">Penetration Test</td>
+      <td align="center">فرآیند شبیه‌سازی حملات سایبری به سامانه برای شناسایی آسیب‌پذیری‌های امنیتی و ارزیابی سطح امنیت سامانه.</td>
+      <td align="center">بخش ۸، ۱۰، ۱۱</td>
+    </tr>
+    <tr>
+      <td align="center">۸</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">جداسازی منابع</span></td>
+      <td align="center">Bulkhead Pattern</td>
+      <td align="center">الگویی که منابع سرویس‌ها را از یکدیگر جدا می‌کند تا خرابی یک سرویس بر سایر سرویس‌ها تأثیر نگذارد.</td>
+      <td align="center">بخش ۴، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۹</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">حافظه نهان توزیع‌شده</span></td>
+      <td align="center">Distributed Cache</td>
+      <td align="center">سامانه‌ای برای ذخیره موقت داده‌ها با کارایی بالا که به عنوان لایه کشینگ بین سرویس‌ها و پایگاه داده اصلی قرار می‌گیرد.</td>
+      <td align="center">بخش ۴، ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۱۰</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">خدمات مدیریت‌شده ابری</span></td>
+      <td align="center">Managed Cloud Services</td>
+      <td align="center">سرویس‌های ابری که توسط ارائه‌دهنده ابر مدیریت می‌شوند و شامل پشتیبان‌گیری، به‌روزرسانی و مقیاس‌پذیری هستند.</td>
+      <td align="center">بخش ۷</td>
+    </tr>
+    <tr>
+      <td align="center">۱۱</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">دسترس‌پذیری</span></td>
+      <td align="center">Availability</td>
+      <td align="center">توانایی سیستم برای ارائه خدمات در زمان‌های مورد نیاز که معمولاً به صورت درصدی از زمان در دسترس بودن اندازه‌گیری می‌شود.</td>
+      <td align="center">بخش ۲، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">۱۲</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">دروازه رابط برنامه‌نویسی</span></td>
+      <td align="center">API Gateway</td>
+      <td align="center">نقطه ورود واحد به سامانه که وظایف مسیریابی درخواست‌ها، احراز هویت و محدودیت نرخ را بر عهده دارد.</td>
+      <td align="center">بخش ۵، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۱۳</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط برنامه‌نویسی RESTful</span></td>
+      <td align="center">RESTful API</td>
+      <td align="center">رابطی برای ارتباط بین سرویس‌ها که از پروتکل HTTP و روش‌های استاندارد مانند GET، POST، PUT و DELETE استفاده می‌کند.</td>
+      <td align="center">بخش ۴، ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۱۴</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ردیابی توزیع‌شده</span></td>
+      <td align="center">Distributed Tracing</td>
+      <td align="center">روشی برای مشاهده مسیر درخواست‌ها در سرویس‌های مختلف و تحلیل عملکرد آنها که به شناسایی گلوگاه‌ها کمک می‌کند.</td>
+      <td align="center">بخش ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۱۵</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ریزخدمات</span></td>
+      <td align="center">Microservices</td>
+      <td align="center">رویکردی در معماری نرم‌افزار که سیستم را به مجموعه‌ای از سرویس‌های کوچک، مستقل و قابل استقرار جداگانه تقسیم می‌کند.</td>
+      <td align="center">بخش ۴، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۱۶</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">زیرساخت به‌عنوان کد</span></td>
+      <td align="center">Infrastructure as Code</td>
+      <td align="center">رویکردی که در آن زیرساخت با استفاده از کد تعریف و مدیریت می‌شود و امکان نسخه‌بندی و تکرارپذیری را فراهم می‌کند.</td>
+      <td align="center">بخش ۴، ۷</td>
+    </tr>
+    <tr>
+      <td align="center">۱۷</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس کوکرنیتس الاستیک آمازون</span></td>
+      <td align="center">Amazon EKS</td>
+      <td align="center">سرویس مدیریت‌شده کوکرنیتس در آمازون وب سرویس‌ها که راه‌اندازی و مدیریت خوشه‌های کوکرنیتس را ساده می‌کند.</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۱۸</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">شبکه توزیع محتوا</span></td>
+      <td align="center">CDN</td>
+      <td align="center">شبکه‌ای از سرورها برای توزیع محتوا به کاربران بر اساس موقعیت جغرافیایی که سرعت بارگذاری را افزایش می‌دهد.</td>
+      <td align="center">بخش ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۱۹</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">فعال-غیرفعال</span></td>
+      <td align="center">Active-Passive</td>
+      <td align="center">رویکردی در استقرار که در آن یک منطقه به عنوان منطقه اصلی فعال است و منطقه دیگر در حالت غیرفعال قرار دارد.</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۲۰</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کانتینر</span></td>
+      <td align="center">Container</td>
+      <td align="center">بسته‌ای نرم‌افزاری که شامل برنامه و تمام وابستگی‌های آن است و می‌تواند به‌صورت ایزوله روی هر سیستم‌عاملی اجرا گردد.</td>
+      <td align="center">بخش ۵</td>
+    </tr>
+    <tr>
+      <td align="center">۲۱</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کافکا</span></td>
+      <td align="center">Apache Kafka</td>
+      <td align="center">سامانه‌ای توزیع‌شده برای پخش رویداد و پیام‌رسانی با توان عملیاتی بالا و تضمین تحویل پیام.</td>
+      <td align="center">بخش ۴، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۲۲</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کیکلاک</span></td>
+      <td align="center">Keycloak</td>
+      <td align="center">سامانه متن‌باز برای مدیریت هویت و دسترسی که از پروتکل‌های OAuth2 و OpenID Connect پشتیبانی می‌کند.</td>
+      <td align="center">بخش ۵، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۳</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کوکرنیتس</span></td>
+      <td align="center">Kubernetes</td>
+      <td align="center">سامانه‌ای متن‌باز برای ارکستراسیون و مدیریت کانتینرها با قابلیت خودترمیمی و استقرار بدون وقفه.</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۲۴</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">گرافانا</span></td>
+      <td align="center">Grafana</td>
+      <td align="center">ابزار متن‌باز برای نمایش و تحلیل داده‌های زمانی که امکان ایجاد داشبوردهای تعاملی را فراهم می‌کند.</td>
+      <td align="center">بخش ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۵</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">محدودکننده نرخ</span></td>
+      <td align="center">Rate Limiter</td>
+      <td align="center">الگویی که تعداد درخواست‌های ارسالی به یک سرویس را در بازه زمانی مشخص محدود می‌کند.</td>
+      <td align="center">بخش ۴، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۶</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیریت اسرار</span></td>
+      <td align="center">Secrets Management</td>
+      <td align="center">فرآیند ذخیره‌سازی، دسترسی و مدیریت امن اطلاعات حساس مانند کلیدهای API و رمزهای عبور.</td>
+      <td align="center">بخش ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۷</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیریت هویت و دسترسی</span></td>
+      <td align="center">IAM</td>
+      <td align="center">فرآیند شناسایی و تأیید هویت کاربران و تعیین سطح دسترسی آن‌ها به منابع سامانه.</td>
+      <td align="center">بخش ۲، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۸</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مقاوم‌سازی</span></td>
+      <td align="center">Resilience</td>
+      <td align="center">توانایی سیستم برای بازیابی از خطاها و ادامه ارائه خدمت به کاربران.</td>
+      <td align="center">بخش ۴، ۸</td>
+    </tr>
+    <tr>
+      <td align="center">۲۹</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مقیاس‌پذیری</span></td>
+      <td align="center">Scalability</td>
+      <td align="center">توانایی سیستم برای افزایش ظرفیت پردازش با اضافه کردن منابع بیشتر.</td>
+      <td align="center">بخش ۲، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">۳۰</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مقیاس‌کننده خودکار پاد افقی</span></td>
+      <td align="center">HPA</td>
+      <td align="center">مؤلفه‌ای در کوکرنیتس که به‌طور خودکار تعداد پادها را بر اساس استفاده از CPU یا معیارهای سفارشی تنظیم می‌کند.</td>
+      <td align="center">بخش ۷</td>
+    </tr>
+    <tr>
+      <td align="center">۳۱</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">نگهداشت‌پذیری</span></td>
+      <td align="center">Maintainability</td>
+      <td align="center">میزان سهولت درک، اصلاح و توسعه سیستم در طول زمان.</td>
+      <td align="center">بخش ۲، ۱۰</td>
+    </tr>
+    <tr>
+      <td align="center">۳۲</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هدف زمان بازیابی</span></td>
+      <td align="center">RTO</td>
+      <td align="center">حداکثر زمان مجاز برای بازیابی سامانه و بازگرداندن آن به حالت عملیاتی پس از بروز فاجعه.</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۳۳</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هدف نقطه بازیابی</span></td>
+      <td align="center">RPO</td>
+      <td align="center">حداکثر میزان از دست دادن داده که در هنگام بازیابی پس از فاجعه قابل قبول است.</td>
+      <td align="center">بخش ۷، ۹</td>
+    </tr>
+    <tr>
+      <td align="center">۳۴</td>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">یاگر</span></td>
+      <td align="center">Jaeger</td>
+      <td align="center">سامانه متن‌باز برای ردیابی توزیع‌شده که به مشاهده مسیر درخواست‌ها در سرویس‌های مختلف کمک می‌کند.</td>
+      <td align="center">بخش ۸</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1633 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../09-architecture-decisions/">
+      
+      
+        <link rel="next" href="../11-risks-tech-debt/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۱۰. الزامات کیفی - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۱۰. الزامات کیفی
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.1-Component-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دسترس‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کارایی و پاسخ‌گویی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مقیاس‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        امنیت
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نگهداشت‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قابلیت اطمینان
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قابلیت استفاده
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تاب‌آوری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        دسترس‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کارایی و پاسخ‌گویی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مقیاس‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        امنیت
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نگهداشت‌پذیری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قابلیت اطمینان
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قابلیت استفاده
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تاب‌آوری
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">الزامات کیفی</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">الزامات کیفی، مجموعه‌ای از معیارها و شاخص‌ها هستند که موفقیت معماری سامانه را تعیین می‌کنند و کیفیت نهایی محصول را می‌سازند.</span></p>
+<p>این الزامات بر اساس اهداف کیفیتی تعریف‌شده در بخش دوم سند، با در نظر گرفتن تصمیمات معماری ثبت‌شده در بخش نهم و ساختار استقرار تشریح‌شده در بخش هفتم، به‌صورت دقیق‌تر و با معیارهای قابل اندازه‌گیری تدوین گردیده‌اند. در ادامه، هر یک از الزامات کیفی به همراه معیارهای پذیرش، روش اندازه‌گیری، ابزارهای مورد استفاده و سناریوهای تست تشریح می‌شوند.</p>
+<h2 id="_3"><span style="color: #E91E63;">دسترس‌پذیری</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید در تمام زمان‌های مورد نیاز، به‌صورت قابل اعتماد در دسترس کاربران باشد.</span></p>
+<p>بر اساس معماری استقرار تشریح‌شده در بخش هفتم، سامانه با استقرار در دو منطقه در دسترس در منطقه اصلی و یک منطقه پشتیبان، برای تأمین دسترس‌پذیری بالا طراحی شده است. استفاده از کوکرنیتس با قابلیت خودترمیمی و استقرار بدون وقفه، این هدف را پشتیبانی می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>دسترس‌پذیری ۹۹/۹۹ درصد در طول سال</p>
+</li>
+<li>
+<p>زمان قطعی سالانه کمتر از ۵۲ دقیقه</p>
+</li>
+<li>
+<p>زمان بازیابی از خطا کمتر از ۳۰ ثانیه</p>
+</li>
+<li>
+<p>زمان جابه‌جایی به منطقه پشتیبان کمتر از ۱۵ دقیقه</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>پایش مداوم زمان در دسترس بودن سامانه با استفاده از پرومتئوس و بلک‌باکس اکسپورتر</p>
+</li>
+<li>
+<p>ثبت و تحلیل زمان‌های قطعی در داشبورد گرافانا</p>
+</li>
+<li>
+<p>بررسی دوره‌ای لاگ‌های خطا برای شناسایی الگوهای قطعی</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>پرومتئوس برای جمع‌آوری معیارهای دسترس‌پذیری</p>
+</li>
+<li>
+<p>گرافانا برای نمایش و تحلیل داده‌ها</p>
+</li>
+<li>
+<p>بلک‌باکس اکسپورتر برای پایش نقاط پایانی از خارج</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">خرابی یک منطقه در دسترس</td>
+      <td align="center">قطع اتصال منطقه us-east-1a</td>
+      <td align="center">ترافیک به‌صورت خودکار به منطقه us-east-1b هدایت شود</td>
+    </tr>
+    <tr>
+      <td align="center">خرابی کامل منطقه اصلی</td>
+      <td align="center">قطع اتصال کل منطقه us-east-1</td>
+      <td align="center">جابه‌جایی به منطقه us-west-2 در کمتر از ۱۵ دقیقه</td>
+    </tr>
+    <tr>
+      <td align="center">خرابی یک نمونه از سرویس</td>
+      <td align="center">خاموش کردن یک پاد از سرویس کاتالوگ</td>
+      <td align="center">پاد جدید به‌صورت خودکار جایگزین شود</td>
+    </tr>
+    <tr>
+      <td align="center">افزایش ناگهانی ترافیک</td>
+      <td align="center">ارسال بار ۱۰ برابر به سامانه</td>
+      <td align="center">سامانه بدون کاهش عملکرد پاسخ دهد</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_4"><span style="color: #E91E63;">کارایی و پاسخ‌گویی</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید درخواست‌های کاربران را با سرعت مناسب و در زمان معقول پاسخ دهد.</span></p>
+<p>بر اساس معماری طراحی‌شده در بخش پنجم، استفاده از حافظه نهان توزیع‌شده، شبکه توزیع محتوا و ارتباطات ناهمگام، همگی در جهت بهبود کارایی و پاسخ‌گویی سامانه طراحی شده‌اند. همچنین انتخاب Elasticsearch برای سرویس جستجو، پاسخ‌گویی در میلی‌ثانیه را تضمین می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>زمان پاسخ‌گویی کمتر از ۲۰۰ میلی‌ثانیه برای ۹۵ درصد درخواست‌های همگام</p>
+</li>
+<li>
+<p>زمان پاسخ‌گویی کمتر از ۵۰۰ میلی‌ثانیه برای ۹۹ درصد درخواست‌ها</p>
+</li>
+<li>
+<p>توان پردازش حداقل ۱۰,۰۰۰ درخواست در ثانیه</p>
+</li>
+<li>
+<p>زمان بارگذاری صفحه وب کمتر از ۲ ثانیه</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>اندازه‌گیری زمان پاسخ‌گویی با استفاده از ابزارهای APM مانند یاگر و پرومتئوس</p>
+</li>
+<li>
+<p>تحلیل توزیع زمان پاسخ‌گویی در داشبورد گرافانا</p>
+</li>
+<li>
+<p>اجرای تست‌های بار با استفاده از ابزارهایی مانند JMeter و Locust</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>یاگر برای ردیابی توزیع‌شده و تحلیل زمان پاسخ‌گویی</p>
+</li>
+<li>
+<p>پرومتئوس برای جمع‌آوری معیارهای عملکرد</p>
+</li>
+<li>
+<p>گرافانا برای نمایش و تحلیل داده‌ها</p>
+</li>
+<li>
+<p>JMeter برای اجرای تست‌های بار</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">جستجوی محصول</td>
+      <td align="center">ارسال ۱۰۰۰ درخواست جستجو همزمان</td>
+      <td align="center">زمان پاسخ کمتر از ۱۰۰ میلی‌ثانیه</td>
+    </tr>
+    <tr>
+      <td align="center">مشاهده کاتالوگ</td>
+      <td align="center">ارسال ۲۰۰۰ درخواست مشاهده محصول همزمان</td>
+      <td align="center">زمان پاسخ کمتر از ۱۵۰ میلی‌ثانیه</td>
+    </tr>
+    <tr>
+      <td align="center">ثبت سفارش</td>
+      <td align="center">ارسال ۵۰۰ درخواست ثبت سفارش همزمان</td>
+      <td align="center">زمان پاسخ کمتر از ۳۰۰ میلی‌ثانیه</td>
+    </tr>
+    <tr>
+      <td align="center">پرداخت</td>
+      <td align="center">ارسال ۲۰۰ درخواست پرداخت همزمان</td>
+      <td align="center">زمان پاسخ کمتر از ۵۰۰ میلی‌ثانیه</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_5"><span style="color: #E91E63;">مقیاس‌پذیری</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید توانایی رشد و افزایش ظرفیت پردازش را با اضافه کردن منابع بیشتر داشته باشد.</span></p>
+<p>بر اساس تصمیم معماری ADR-۰۰۱ در بخش نهم، انتخاب معماری ریزخدمات، مقیاس‌پذیری هدفمند هر سرویس را امکان‌پذیر می‌سازد. همچنین استفاده از کوکرنیتس با قابلیت Horizontal Pod Autoscaler، مقیاس‌پذیری خودکار را تضمین می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>پشتیبانی از رشد تراکنشی تا ۱۰ برابر ظرفیت اولیه</p>
+</li>
+<li>
+<p>زمان مقیاس‌پذیری کمتر از ۲ دقیقه برای هر سرویس</p>
+</li>
+<li>
+<p>افزایش خطی عملکرد با افزایش منابع</p>
+</li>
+<li>
+<p>مقیاس‌پذیری مستقل هر سرویس بر اساس بار خود</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>پایش خودکار تعداد نمونه‌های هر سرویس در کوکرنیتس</p>
+</li>
+<li>
+<p>اندازه‌گیری زمان پاسخ‌گویی در شرایط بار مختلف</p>
+</li>
+<li>
+<p>تحلیل معیارهای استفاده از CPU و حافظه در زمان افزایش بار</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>Horizontal Pod Autoscaler در کوکرنیتس</p>
+</li>
+<li>
+<p>پرومتئوس برای جمع‌آوری معیارهای مقیاس‌پذیری</p>
+</li>
+<li>
+<p>گرافانا برای نمایش و تحلیل داده‌ها</p>
+</li>
+<li>
+<p>K6 برای اجرای تست‌های بار</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">افزایش بار سرویس کاتالوگ</td>
+      <td align="center">افزایش ناگهانی ۵ برابری درخواست‌ها</td>
+      <td align="center">تعداد نمونه‌ها به‌صورت خودکار از ۳ به ۶ افزایش یابد</td>
+    </tr>
+    <tr>
+      <td align="center">افزایش بار سرویس سفارش</td>
+      <td align="center">افزایش ناگهانی ۳ برابری درخواست‌ها</td>
+      <td align="center">تعداد نمونه‌ها به‌صورت خودکار از ۳ به ۵ افزایش یابد</td>
+    </tr>
+    <tr>
+      <td align="center">افزایش بار سرویس جستجو</td>
+      <td align="center">افزایش ناگهانی ۴ برابری درخواست‌ها</td>
+      <td align="center">تعداد نمونه‌ها به‌صورت خودکار از ۲ به ۴ افزایش یابد</td>
+    </tr>
+    <tr>
+      <td align="center">کاهش بار</td>
+      <td align="center">کاهش ناگهانی درخواست‌ها به میزان ۵۰ درصد</td>
+      <td align="center">تعداد نمونه‌ها به‌صورت خودکار کاهش یابد</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_6"><span style="color: #E91E63;">امنیت</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید از داده‌های کاربران محافظت کند و دسترسی غیرمجاز را شناسایی و مسدود نماید.</span></p>
+<p>بر اساس معماری امنیتی تشریح‌شده در بخش هشتم، استفاده از کیکلاک برای مدیریت هویت و دسترسی، رمزنگاری ارتباطات با TLS 1.3 و مدیریت اسرار با Vault، لایه‌های مختلف امنیتی را پوشش می‌دهد. همچنین استفاده از دروازه رابط برنامه‌نویسی Kong برای محدودیت نرخ و احراز هویت، امنیت را در لایه ورودی تأمین می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>انطباق کامل با استانداردهای OWASP Top 10</p>
+</li>
+<li>
+<p>رمزنگاری تمام ارتباطات با TLS 1.3</p>
+</li>
+<li>
+<p>ذخیره‌سازی رمزنگاری‌شده داده‌های حساس</p>
+</li>
+<li>
+<p>ثبت تمام رویدادهای امنیتی در ثبت‌کننده بازرسی</p>
+</li>
+<li>
+<p>شناسایی و مسدودسازی حملات انکار سرویس</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>اجرای دوره‌ای تست نفوذ توسط تیم امنیت</p>
+</li>
+<li>
+<p>اسکن خودکار آسیب‌پذیری‌ها با استفاده از ابزارهای OWASP ZAP</p>
+</li>
+<li>
+<p>پایش و تحلیل لاگ‌های امنیتی در پشته ELK</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>کیکلاک برای مدیریت هویت و دسترسی</p>
+</li>
+<li>
+<p>Vault برای مدیریت اسرار</p>
+</li>
+<li>
+<p>OWASP ZAP برای اسکن آسیب‌پذیری‌ها</p>
+</li>
+<li>
+<p>پشته ELK برای تحلیل لاگ‌های امنیتی</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">حملات تزریق SQL</td>
+      <td align="center">ارسال درخواست‌های مخرب با کدهای SQL</td>
+      <td align="center">درخواست‌ها توسط ORM خنثی شده و خطای مناسب بازگردد</td>
+    </tr>
+    <tr>
+      <td align="center">دسترسی غیرمجاز</td>
+      <td align="center">تلاش برای دسترسی به منابع بدون توکن معتبر</td>
+      <td align="center">درخواست با خطای ۴۰۳ Unauthorized پاسخ داده شود</td>
+    </tr>
+    <tr>
+      <td align="center">حملات انکار سرویس</td>
+      <td align="center">ارسال حجم بالای درخواست از IPهای مختلف</td>
+      <td align="center">محدودکننده نرخ در Kong فعال شود</td>
+    </tr>
+    <tr>
+      <td align="center">شناسایی رویداد امنیتی</td>
+      <td align="center">تعداد زیادی تلاش ناموفق برای ورود</td>
+      <td align="center">رویداد در ثبت‌کننده بازرسی ثبت و هشدار ارسال شود</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_7"><span style="color: #E91E63;">نگهداشت‌پذیری</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید به‌گونه‌ای طراحی شود که توسعه، اصلاح و نگهداری آن با هزینه و زمان مناسب امکان‌پذیر باشد.</span></p>
+<p>بر اساس تصمیم معماری ADR-۰۰۱ در بخش نهم، معماری ریزخدمات با جداسازی محکم سرویس‌ها، نگهداشت‌پذیری بالایی را فراهم می‌کند. همچنین استفاده از مستندسازی زنده با MkDocs و پوشش تست‌های واحد بالا، نگهداری سامانه را تسهیل می‌سازد.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>زمان پیاده‌سازی یک ویژگی جدید کمتر از ۲ هفته</p>
+</li>
+<li>
+<p>زمان شناسایی و رفع یک خطا کمتر از ۴ ساعت</p>
+</li>
+<li>
+<p>پوشش کد تست‌های واحد بالای ۸۰ درصد</p>
+</li>
+<li>
+<p>مستندسازی کامل و به‌روز با استفاده از MkDocs</p>
+</li>
+<li>
+<p>زمان استقرار نسخه جدید کمتر از ۱۰ دقیقه</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>اندازه‌گیری زمان چرخه توسعه با استفاده از ابزارهای مدیریت پروژه مانند جیرا</p>
+</li>
+<li>
+<p>تحلیل پوشش تست‌ها با استفاده از ابزارهایی مانند JaCoCo</p>
+</li>
+<li>
+<p>بررسی دوره‌ای مستندات و به‌روزرسانی آنها</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>جیرا برای مدیریت پروژه و پیگیری زمان</p>
+</li>
+<li>
+<p>JaCoCo برای تحلیل پوشش تست‌ها</p>
+</li>
+<li>
+<p>MkDocs برای مستندسازی</p>
+</li>
+<li>
+<p>GitHub Actions برای استقرار خودکار</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">اضافه کردن ویژگی جدید</td>
+      <td align="center">پیاده‌سازی یک قابلیت جدید در سرویس کاتالوگ</td>
+      <td align="center">تغییرات فقط در همان سرویس اعمال شود و سایر سرویس‌ها تحت تأثیر قرار نگیرند</td>
+    </tr>
+    <tr>
+      <td align="center">رفع خطا</td>
+      <td align="center">شناسایی و رفع یک خطا در سرویس پرداخت</td>
+      <td align="center">تغییرات بدون تأثیر بر سایر سرویس‌ها اعمال شود</td>
+    </tr>
+    <tr>
+      <td align="center">به‌روزرسانی مستندات</td>
+      <td align="center">تغییر در معماری سامانه</td>
+      <td align="center">مستندات در کمتر از ۲۴ ساعت به‌روزرسانی شوند</td>
+    </tr>
+    <tr>
+      <td align="center">استقرار نسخه جدید</td>
+      <td align="center">انتشار نسخه جدید سرویس سفارش</td>
+      <td align="center">استقرار در کمتر از ۱۰ دقیقه و بدون وقفه انجام شود</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_8"><span style="color: #E91E63;">قابلیت اطمینان</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید در شرایط مختلف به‌درستی کار کند و از از دست رفتن داده‌ها جلوگیری نماید.</span></p>
+<p>بر اساس تصمیم معماری ADR-۰۰۶ در بخش نهم، استفاده از استقرار فعال-غیرفعال با هدف زمان بازیابی پانزده دقیقه و هدف نقطه بازیابی شش ساعت، قابلیت اطمینان بالایی را تضمین می‌کند. همچنین استفاده از الگوی SAGA برای مدیریت تراکنش‌های توزیع‌شده، یکپارچگی داده‌ها را حفظ می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>میزان خطا کمتر از ۰/۱ درصد درخواست‌ها</p>
+</li>
+<li>
+<p>بازیابی خودکار از خطاهای موقت با استفاده از الگوی تکرار</p>
+</li>
+<li>
+<p>یکپارچگی داده‌ها در تراکنش‌های توزیع‌شده با الگوی SAGA</p>
+</li>
+<li>
+<p>پشتیبان‌گیری دوره‌ای با هدف نقطه بازیابی ۶ ساعت</p>
+</li>
+<li>
+<p>ذخیره‌سازی پایدار پیام‌ها در کافکا</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>پایش میزان خطا با استفاده از پرومتئوس</p>
+</li>
+<li>
+<p>تست دوره‌ای سناریوهای خرابی</p>
+</li>
+<li>
+<p>بررسی یکپارچگی داده‌ها پس از بازیابی</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>پرومتئوس برای پایش میزان خطا</p>
+</li>
+<li>
+<p>Resilience4J برای اجرای الگوی تکرار و قطع‌کننده مدار</p>
+</li>
+<li>
+<p>سرویس پشتیبان‌گیری برای پشتیبان‌گیری دوره‌ای</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">خرابی پایگاه داده</td>
+      <td align="center">قطع اتصال به پایگاه داده PostgreSQL</td>
+      <td align="center">قطع‌کننده مدار فعال شده و درخواست‌ها با خطای مناسب پاسخ داده شوند</td>
+    </tr>
+    <tr>
+      <td align="center">خرابی سرویس خارجی</td>
+      <td align="center">قطع اتصال به درگاه پرداخت</td>
+      <td align="center">الگوی تکرار فعال شده و پس از بازیابی، درخواست مجدد ارسال شود</td>
+    </tr>
+    <tr>
+      <td align="center">قطع اتصال شبکه</td>
+      <td align="center">قطع اتصال بین سرویس سفارش و سرویس موجودی</td>
+      <td align="center">پیام‌ها در کافکا ذخیره شده و پس از بازیابی پردازش شوند</td>
+    </tr>
+    <tr>
+      <td align="center">بازیابی از پشتیبان</td>
+      <td align="center">بازیابی پایگاه داده PostgreSQL از پشتیبان</td>
+      <td align="center">داده‌ها با موفقیت بازیابی شده و یکپارچگی حفظ شود</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_9"><span style="color: #E91E63;">قابلیت استفاده</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید برای کاربران نهایی آسان و قابل فهم باشد و تجربه کاربری روانی ارائه دهد.</span></p>
+<p>بر اساس معماری تشریح‌شده در بخش پنجم، استفاده از Next.js برای برنامه وب و React Native برای برنامه موبایل، تجربه کاربری مدرن و روانی را فراهم می‌کند. استفاده از شبکه توزیع محتوا برای بارگذاری سریع تصاویر و محتوای ایستا نیز به بهبود تجربه کاربری کمک می‌کند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>رضایت کاربران بالای ۹۰ درصد در نظرسنجی‌های دوره‌ای</p>
+</li>
+<li>
+<p>نرخ تبدیل سفارش بالای ۱۵ درصد</p>
+</li>
+<li>
+<p>زمان بارگذاری صفحه کمتر از ۲ ثانیه</p>
+</li>
+<li>
+<p>دسترس‌پذیری از دستگاه‌های مختلف شامل وب و موبایل</p>
+</li>
+<li>
+<p>نرخ بازگشت مشتری بالای ۴۰ درصد</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>اجرای دوره‌ای نظرسنجی از کاربران</p>
+</li>
+<li>
+<p>تحلیل نرخ تبدیل با استفاده از ابزارهای تحلیل رفتار کاربر</p>
+</li>
+<li>
+<p>اندازه‌گیری زمان بارگذاری با استفاده از ابزارهای Web Vitals</p>
+</li>
+<li>
+<p>تحلیل نرخ بازگشت مشتری با استفاده از ابزارهای تحلیل کسب‌وکار</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>Google Analytics برای تحلیل رفتار کاربر</p>
+</li>
+<li>
+<p>Hotjar برای ضبط تعاملات کاربر</p>
+</li>
+<li>
+<p>Lighthouse برای اندازه‌گیری Web Vitals</p>
+</li>
+<li>
+<p>ابزارهای نظرسنجی مانند SurveyMonkey</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">بارگذاری صفحه اصلی</td>
+      <td align="center">بارگذاری صفحه اصلی فروشگاه</td>
+      <td align="center">زمان بارگذاری کمتر از ۲ ثانیه</td>
+    </tr>
+    <tr>
+      <td align="center">جستجو و خرید</td>
+      <td align="center">جستجوی محصول و تکمیل خرید</td>
+      <td align="center">کاربر بتواند کل فرآیند را در کمتر از ۵ دقیقه تکمیل کند</td>
+    </tr>
+    <tr>
+      <td align="center">استفاده از دستگاه موبایل</td>
+      <td align="center">باز کردن سامانه با گوشی موبایل</td>
+      <td align="center">سامانه به‌درستی نمایش داده شده و تمام قابلیت‌ها در دسترس باشد</td>
+    </tr>
+    <tr>
+      <td align="center">بازگشت مشتری</td>
+      <td align="center">پیگیری خرید مجدد مشتریان</td>
+      <td align="center">نرخ بازگشت بالای ۴۰ درصد</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_10"><span style="color: #E91E63;">تاب‌آوری</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">سامانه باید در برابر خطاها مقاوم باشد و در صورت بروز خطا، به‌سرعت بازیابی شود.</span></p>
+<p>بر اساس تصمیم معماری ADR-۰۰۸ در بخش نهم، استفاده از ترکیب Resilience4J و Istio برای مقاوم‌سازی سامانه، لایه‌های مختلفی از محافظت را فراهم می‌کند. قطع‌کننده مدار، تکرار با پشتیبان نمایی، محدودکننده نرخ و جداسازی منابع، همگی در جهت افزایش تاب‌آوری سامانه طراحی شده‌اند.</p>
+<p><strong>معیار پذیرش:</strong></p>
+<ul>
+<li>
+<p>بازیابی خودکار از خطاهای موقت در کمتر از ۵ ثانیه</p>
+</li>
+<li>
+<p>جلوگیری از خرابی‌های آبشاری با استفاده از قطع‌کننده مدار</p>
+</li>
+<li>
+<p>حفظ عملکرد سامانه در صورت خرابی یک سرویس غیرحیاتی</p>
+</li>
+<li>
+<p>کاهش تأثیر خطاها با جداسازی منابع</p>
+</li>
+</ul>
+<p><strong>روش اندازه‌گیری:</strong></p>
+<ul>
+<li>
+<p>پایش میزان فعال‌شدن قطع‌کننده مدار با استفاده از Resilience4J</p>
+</li>
+<li>
+<p>اندازه‌گیری زمان بازیابی از خطا با استفاده از پرومتئوس</p>
+</li>
+<li>
+<p>تست دوره‌ای سناریوهای خرابی</p>
+</li>
+</ul>
+<p><strong>ابزارهای مورد استفاده:</strong></p>
+<ul>
+<li>
+<p>Resilience4J برای اجرای الگوهای مقاوم‌سازی</p>
+</li>
+<li>
+<p>Istio برای مدیریت شبکه و مقاوم‌سازی در سطح شبکه</p>
+</li>
+<li>
+<p>پرومتئوس برای پایش معیارهای تاب‌آوری</p>
+</li>
+</ul>
+<p><strong>سناریوهای تست:</strong></p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">سناریو</th>
+      <th align="center">اقدام</th>
+      <th align="center">نتیجه مورد انتظار</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">خرابی سرویس توصیه‌گر</td>
+      <td align="center">خاموش کردن سرویس توصیه‌گر</td>
+      <td align="center">سایر سرویس‌ها به کار خود ادامه دهند</td>
+    </tr>
+    <tr>
+      <td align="center">تأخیر در سرویس موجودی</td>
+      <td align="center">ایجاد تأخیر ۵ ثانیه‌ای در سرویس موجودی</td>
+      <td align="center">قطع‌کننده مدار فعال شده و از ارسال درخواست جلوگیری شود</td>
+    </tr>
+    <tr>
+      <td align="center">بار زیاد روی سرویس کاتالوگ</td>
+      <td align="center">ارسال بار بیش از حد به سرویس کاتالوگ</td>
+      <td align="center">محدودکننده نرخ فعال شده و از بارگذاری بیش از حد جلوگیری شود</td>
+    </tr>
+    <tr>
+      <td align="center">قطع اتصال شبکه</td>
+      <td align="center">قطع اتصال بین سرویس‌ها</td>
+      <td align="center">الگوی تکرار فعال شده و درخواست‌ها مجدداً ارسال شوند</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_11"><span style="color: #E91E63;">پانویس‌ها</span><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">¹ OWASP Top 10</span>
+لیستی از ده آسیب‌پذیری بحرانی امنیتی در برنامه‌های وب که توسط پروژه Open Web Application Security Project منتشر می‌شود و به عنوان مرجع استاندارد امنیت وب شناخته می‌شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">² TLS 1.3</span>
+جدیدترین نسخه پروتکل امنیت لایه انتقال که برای رمزنگاری ارتباطات شبکه استفاده می‌شود و نسبت به نسخه‌های قبلی امن‌تر و سریع‌تر است.</p>
+<p><span style="color: #1976D2; font-weight: bold;">³ تست نفوذ (Penetration Test)</span>
+فرآیند شبیه‌سازی حملات سایبری به سامانه برای شناسایی آسیب‌پذیری‌های امنیتی و ارزیابی سطح امنیت سامانه.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁴ Web Vitals</span>
+مجموعه‌ای از معیارهای کلیدی برای اندازه‌گیری تجربه کاربری در وب که توسط گوگل معرفی شده و شامل معیارهایی مانند Largest Contentful Paint، First Input Delay و Cumulative Layout Shift می‌شود.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁵ Resilience4J</span>
+کتابخانه مقاوم‌سازی برای Java که الگوهایی مانند قطع‌کننده مدار، تکرار با پشتیبان نمایی، محدودکننده نرخ و جداسازی منابع را پیاده‌سازی می‌کند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁶ Istio</span>
+شبکه سرویس متن‌باز که قابلیت‌های مدیریت ترافیک، امنیت و مشاهده‌پذیری را در سطح شبکه برای سرویس‌های مستقر در کوکرنیتس فراهم می‌کند.</p>
+<p><span style="color: #1976D2; font-weight: bold;">⁷ Horizontal Pod Autoscaler</span>
+مؤلفه‌ای در کوکرنیتس که به‌طور خودکار تعداد پادها را بر اساس معیارهایی مانند استفاده از CPU یا معیارهای سفارشی تنظیم می‌کند.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

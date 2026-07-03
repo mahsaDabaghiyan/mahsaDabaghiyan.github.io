@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" font-family="Vazirmatn, Tahoma, sans-serif" dir="rtl">
+  <style>
+    text { font-family: Vazirmatn, Tahoma, sans-serif; }
+    .actor-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; rx: 8; }
+    .actor-text { fill: white; font-size: 12px; font-weight: bold; text-anchor: middle; }
+    .line { stroke: #7f8c8d; stroke-width: 2; stroke-dasharray: 6,4; }
+    .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .arrow-return { stroke: #2c3e50; stroke-width: 2; stroke-dasharray: 6,4; fill: none; marker-end: url(#arrowhead); }
+    .label { font-size: 10px; fill: #2c3e50; text-anchor: middle; }
+    .label-right { font-size: 10px; fill: #2c3e50; text-anchor: start; }
+    .title { font-size: 14px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+    .phase { fill: #eafaf1; stroke: #2ecc71; stroke-width: 1; rx: 5; }
+    .phase-text { font-size: 11px; font-weight: bold; fill: #1a7a3a; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- عنوان -->
+  <text x="350" y="25" class="title">نمودار توالی جستجوی محصول</text>
+
+  <!-- بازیگران -->
+  <rect x="30" y="45" width="100" height="35" class="actor-box"/>
+  <text x="80" y="67" class="actor-text">مشتری</text>
+
+  <rect x="160" y="45" width="100" height="35" class="actor-box"/>
+  <text x="210" y="67" class="actor-text">برنامه وب</text>
+
+  <rect x="290" y="45" width="100" height="35" class="actor-box"/>
+  <text x="340" y="67" class="actor-text">دروازه</text>
+
+  <rect x="420" y="45" width="100" height="35" class="actor-box"/>
+  <text x="470" y="67" class="actor-text">سرویس جستجو</text>
+
+  <rect x="550" y="45" width="100" height="35" class="actor-box"/>
+  <text x="600" y="67" class="actor-text">موتور جستجو</text>
+
+  <!-- خطوط زندگی -->
+  <line x1="80" y1="80" x2="80" y2="410" class="line"/>
+  <line x1="210" y1="80" x2="210" y2="410" class="line"/>
+  <line x1="340" y1="80" x2="340" y2="410" class="line"/>
+  <line x1="470" y1="80" x2="470" y2="410" class="line"/>
+  <line x1="600" y1="80" x2="600" y2="410" class="line"/>
+
+  <!-- مرحله ۱ -->
+  <rect x="230" y="110" width="160" height="22" class="phase"/>
+  <text x="310" y="125" class="phase-text">مرحله ۱: ورود عبارت</text>
+
+  <line x1="80" y1="145" x2="205" y2="145" class="arrow"/>
+  <text x="143" y="138" class="label">وارد کردن "لپ‌تاپ"</text>
+
+  <!-- مرحله ۲ -->
+  <rect x="230" y="170" width="160" height="22" class="phase"/>
+  <text x="310" y="185" class="phase-text">مرحله ۲: درخواست جستجو</text>
+
+  <line x1="210" y1="205" x2="335" y2="205" class="arrow"/>
+  <text x="273" y="198" class="label">درخواست جستجو</text>
+
+  <!-- مرحله ۳ -->
+  <rect x="230" y="230" width="160" height="22" class="phase"/>
+  <text x="310" y="245" class="phase-text">مرحله ۳: ارسال به سرویس</text>
+
+  <line x1="340" y1="265" x2="465" y2="265" class="arrow"/>
+  <text x="403" y="258" class="label">ارسال عبارت</text>
+
+  <!-- مرحله ۴ -->
+  <rect x="230" y="290" width="160" height="22" class="phase"/>
+  <text x="310" y="305" class="phase-text">مرحله ۴: اجرای جستجو</text>
+
+  <line x1="470" y1="325" x2="595" y2="325" class="arrow"/>
+  <text x="533" y="318" class="label">اجرای جستجو</text>
+
+  <line x1="595" y1="345" x2="475" y2="345" class="arrow-return"/>
+  <text x="535" y="363" class="label-right">نتایج</text>
+
+  <!-- مرحله ۵ -->
+  <rect x="230" y="380" width="160" height="22" class="phase"/>
+  <text x="310" y="395" class="phase-text">مرحله ۵: نمایش نتایج</text>
+
+  <line x1="470" y1="380" x2="215" y2="380" class="arrow-return"/>
+  <text x="343" y="398" class="label-right">نمایش نتایج</text>
+</svg>

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" font-family="Vazirmatn, Tahoma, sans-serif" dir="rtl">
+  <style>
+    text { font-family: Vazirmatn, Tahoma, sans-serif; }
+    .actor-box { fill: #e67e22; stroke: #d35400; stroke-width: 2; rx: 8; }
+    .actor-text { fill: white; font-size: 11px; font-weight: bold; text-anchor: middle; }
+    .line { stroke: #7f8c8d; stroke-width: 2; stroke-dasharray: 6,4; }
+    .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .arrow-return { stroke: #2c3e50; stroke-width: 2; stroke-dasharray: 6,4; fill: none; marker-end: url(#arrowhead); }
+    .label { font-size: 9px; fill: #2c3e50; text-anchor: middle; }
+    .label-right { font-size: 9px; fill: #2c3e50; text-anchor: start; }
+    .title { font-size: 14px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+    .phase { fill: #fdebd0; stroke: #e67e22; stroke-width: 1; rx: 5; }
+    .phase-text { font-size: 10px; font-weight: bold; fill: #a04000; text-anchor: middle; }
+    .par-box { fill: #eaf2f8; stroke: #3498db; stroke-width: 1; rx: 5; stroke-dasharray: 4,4; }
+    .par-text { font-size: 10px; font-weight: bold; fill: #2471a3; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- عنوان -->
+  <text x="450" y="25" class="title">نمودار توالی ثبت سفارش - بخش ناهمگام (رویدادها)</text>
+
+  <!-- بازیگران -->
+  <rect x="20" y="45" width="90" height="35" class="actor-box"/>
+  <text x="65" y="67" class="actor-text">سرویس سفارش</text>
+
+  <rect x="130" y="45" width="90" height="35" class="actor-box"/>
+  <text x="175" y="67" class="actor-text">کافکا</text>
+
+  <rect x="240" y="45" width="90" height="35" class="actor-box"/>
+  <text x="285" y="67" class="actor-text">سرویس پرداخت</text>
+
+  <rect x="350" y="45" width="90" height="35" class="actor-box"/>
+  <text x="395" y="67" class="actor-text">درگاه پرداخت</text>
+
+  <rect x="460" y="45" width="90" height="35" class="actor-box"/>
+  <text x="505" y="67" class="actor-text">سرویس موجودی</text>
+
+  <rect x="570" y="45" width="90" height="35" class="actor-box"/>
+  <text x="615" y="67" class="actor-text">سرویس اطلاع‌رسانی</text>
+
+  <rect x="680" y="45" width="90" height="35" class="actor-box"/>
+  <text x="725" y="67" class="actor-text">مشتری</text>
+
+  <!-- خطوط زندگی -->
+  <line x1="65" y1="80" x2="65" y2="610" class="line"/>
+  <line x1="175" y1="80" x2="175" y2="610" class="line"/>
+  <line x1="285" y1="80" x2="285" y2="610" class="line"/>
+  <line x1="395" y1="80" x2="395" y2="610" class="line"/>
+  <line x1="505" y1="80" x2="505" y2="610" class="line"/>
+  <line x1="615" y1="80" x2="615" y2="610" class="line"/>
+  <line x1="725" y1="80" x2="725" y2="610" class="line"/>
+
+  <!-- مرحله ۶ -->
+  <rect x="250" y="110" width="180" height="22" class="phase"/>
+  <text x="340" y="125" class="phase-text">مرحله ۶: انتشار رویداد اولیه</text>
+
+  <line x1="65" y1="145" x2="170" y2="145" class="arrow"/>
+  <text x="118" y="138" class="label">انتشار "سفارش_ایجاد_شد"</text>
+
+  <!-- پردازش همزمان -->
+  <rect x="230" y="170" width="280" height="180" class="par-box"/>
+  <text x="370" y="188" class="par-text">▎پردازش همزمان رویدادها</text>
+
+  <!-- شاخه پرداخت -->
+  <line x1="175" y1="205" x2="280" y2="205" class="arrow"/>
+  <text x="228" y="198" class="label">دریافت رویداد</text>
+
+  <line x1="285" y1="225" x2="390" y2="225" class="arrow"/>
+  <text x="338" y="218" class="label">درخواست پرداخت</text>
+
+  <line x1="390" y1="245" x2="290" y2="245" class="arrow-return"/>
+  <text x="340" y="263" class="label-right">تأیید پرداخت</text>
+
+  <line x1="285" y1="280" x2="180" y2="280" class="arrow"/>
+  <text x="233" y="273" class="label">انتشار "پرداخت_موفق"</text>
+
+  <!-- شاخه موجودی -->
+  <line x1="175" y1="310" x2="500" y2="310" class="arrow"/>
+  <text x="338" y="303" class="label">دریافت رویداد</text>
+
+  <rect x="460" y="330" width="90" height="22" class="phase" fill="#d5f5e3" stroke="#27ae60"/>
+  <text x="505" y="345" class="phase-text" fill="#1a6a3a">رزرو موقت موجودی</text>
+
+  <!-- مرحله ۱۰ -->
+  <rect x="250" y="380" width="180" height="22" class="phase"/>
+  <text x="340" y="395" class="phase-text">مرحله ۱۰: تأیید نهایی سفارش</text>
+
+  <line x1="175" y1="415" x2="70" y2="415" class="arrow"/>
+  <text x="123" y="408" class="label">دریافت "پرداخت_موفق"</text>
+
+  <rect x="25" y="435" width="80" height="22" class="phase" fill="#d5f5e3" stroke="#27ae60"/>
+  <text x="65" y="450" class="phase-text" fill="#1a6a3a">تغییر وضعیت</text>
+
+  <!-- پردازش همزمان دوم -->
+  <rect x="230" y="480" width="280" height="100" class="par-box"/>
+  <text x="370" y="498" class="par-text">▎اطلاع‌رسانی و تکمیل</text>
+
+  <line x1="175" y1="515" x2="610" y2="515" class="arrow"/>
+  <text x="393" y="508" class="label">دریافت رویداد</text>
+
+  <line x1="615" y1="535" x2="720" y2="535" class="arrow"/>
+  <text x="668" y="528" class="label">ارسال ایمیل/پیامک</text>
+
+  <line x1="175" y1="555" x2="500" y2="555" class="arrow"/>
+  <text x="338" y="548" class="label">دریافت رویداد</text>
+
+  <rect x="460" y="575" width="90" height="22" class="phase" fill="#d5f5e3" stroke="#27ae60"/>
+  <text x="505" y="590" class="phase-text" fill="#1a6a3a">کاهش قطعی موجودی</text>
+
+  <!-- توضیحات پایین -->
+  <text x="450" y="635" font-size="10" fill="#7f8c8d" text-anchor="middle">این بخش شامل تعاملات ناهمگام (غیرهمزمان) از طریق کافکا است.</text>
+</svg>

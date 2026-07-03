@@ -1,0 +1,2404 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستندات معماری نرم‌افزار سامانه فروشگاه اینترنتی">
+      
+      
+      
+      
+        <link rel="prev" href="../05-building-block-view/">
+      
+      
+        <link rel="next" href="../06-runtime-view/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>۵-۱. دیدگاه کامپوننت‌ها - مستندات معماری فروشگاه اینترنتی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CVazirmatn:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Vazirmatn"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-header__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات معماری فروشگاه اینترنتی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ۵-۱. دیدگاه کامپوننت‌ها
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="مستندات معماری فروشگاه اینترنتی" class="md-nav__button md-logo" aria-label="مستندات معماری فروشگاه اینترنتی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مستندات معماری فروشگاه اینترنتی
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    صفحه اصلی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مقدمه و اهداف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. محدودیت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-context-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. دیدگاه زمینه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-solution-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. استراتژی راه‌حل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-building-block-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. دیدگاه کانتینرها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵-۱. دیدگاه کامپوننت‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های برنامه وب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های برنامه وب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های برنامه وب
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس احراز هویت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس احراز هویت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس احراز هویت
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس کاتالوگ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس کاتالوگ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس کاتالوگ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس موجودی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس موجودی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس موجودی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس سفارش
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس سفارش">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس سفارش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس پرداخت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس پرداخت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس پرداخت
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس فروشنده
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس فروشنده">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس فروشنده
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس جستجو
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس جستجو">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس جستجو
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس توصیه‌گر
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس توصیه‌گر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس توصیه‌گر
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس اطلاع‌رسانی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس اطلاع‌رسانی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس اطلاع‌رسانی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس تحلیل
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس تحلیل">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های پشته پایش
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های پشته پایش">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های پشته پایش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های لایه مقاوم‌سازی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس پشتیبان‌گیری
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس پشتیبان‌گیری">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس پشتیبان‌گیری
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-runtime-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. سناریوهای اجرایی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-deployment-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. دیدگاه استقرار
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-crosscutting-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. مفاهیم عرضی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-architecture-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. تصمیمات معماری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. الزامات کیفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-risks-tech-debt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. ریسک‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. واژه‌نامه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نمای کلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های برنامه وب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های برنامه وب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های برنامه وب
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس احراز هویت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس احراز هویت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس احراز هویت
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس کاتالوگ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس کاتالوگ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس کاتالوگ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس موجودی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس موجودی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس موجودی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس سفارش
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس سفارش">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس سفارش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس پرداخت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس پرداخت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس پرداخت
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس فروشنده
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس فروشنده">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس فروشنده
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس جستجو
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس جستجو">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس جستجو
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس توصیه‌گر
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس توصیه‌گر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس توصیه‌گر
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس اطلاع‌رسانی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس اطلاع‌رسانی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس اطلاع‌رسانی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس تحلیل
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس تحلیل">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس تحلیل
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های پشته پایش
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های پشته پایش">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های پشته پایش
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های لایه مقاوم‌سازی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کامپوننت‌های سرویس پشتیبان‌گیری
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="کامپوننت‌های سرویس پشتیبان‌گیری">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        روابط بین کامپوننت‌های سرویس پشتیبان‌گیری
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><span style="color: #E91E63;">دیدگاه کامپوننت‌ها</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">نمای کلی</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">در این دیدگاه، هر کانتینر به مجموعه‌ای از کامپوننت‌های داخلی تجزیه می‌شود و مسئولیت‌ها، ارتباطات و تعاملات آن‌ها به تصویر کشیده می‌شود.</span></p>
+<p>این دیدگاه، سومین سطح از مدل‌سازی C4 را تشکیل می‌دهد و به تیم‌های توسعه کمک می‌کند تا درک عمیق‌تری از ساختار داخلی هر سرویس پیدا کنند. در ادامه، کامپوننت‌های هر سرویس به تفکیک تشریح می‌شوند.</p>
+<h2 id="_3"><span style="color: #E91E63;">کامپوننت‌های برنامه وب</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های برنامه وب" src="../images/WebAppComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱: کامپوننت‌های برنامه وب</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه وب، رابط کاربری اصلی سامانه است که با استفاده از Next.js پیاده‌سازی شده است.</span> این برنامه، هشت کامپوننت اصلی دارد که هر یک مسئولیت بخش خاصی از تجربه کاربری را بر عهده دارند.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری کاتالوگ محصولات</span></td>
+      <td align="center">مرور و جستجوی محصولات</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری سبد خرید</span></td>
+      <td align="center">مدیریت سبد خرید</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری تسویه حساب</span></td>
+      <td align="center">ثبت سفارش و پرداخت</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری پروفایل کاربر</span></td>
+      <td align="center">مدیریت حساب کاربری</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">داشبورد مدیریت</span></td>
+      <td align="center">مدیریت محصولات و سفارشات</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">داشبورد فروشنده</span></td>
+      <td align="center">مدیریت محصولات و سفارشات فروشنده</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری علاقه‌مندی‌ها</span></td>
+      <td align="center">ذخیره محصولات مورد علاقه</td>
+      <td align="center">React</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">رابط کاربری پیگیری سفارش</span></td>
+      <td align="center">پیگیری وضعیت سفارشات</td>
+      <td align="center">React</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_4"><span style="color: #E91E63;">روابط بین کامپوننت‌های برنامه وب</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">رابط کاربری کاتالوگ محصولات</span> به <span style="color: #1976D2; font-weight: bold;">رابط کاربری سبد خرید</span> متصل می‌شود و امکان افزودن محصولات به سبد خرید را فراهم می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">رابط کاربری سبد خرید</span> به <span style="color: #1976D2; font-weight: bold;">رابط کاربری تسویه حساب</span> متصل می‌شود و فرآیند تکمیل خرید را آغاز می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">رابط کاربری پروفایل کاربر</span> اطلاعات کاربری را به <span style="color: #1976D2; font-weight: bold;">رابط کاربری تسویه حساب</span> ارائه می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">داشبورد مدیریت</span> از طریق <span style="color: #1976D2; font-weight: bold;">رابط کاربری کاتالوگ محصولات</span> محصولات را به‌روزرسانی می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">داشبورد فروشنده</span> از طریق <span style="color: #1976D2; font-weight: bold;">رابط کاربری کاتالوگ محصولات</span> محصولات خود را مدیریت می‌کند.</p>
+</li>
+</ul>
+<h2 id="_5"><span style="color: #E91E63;">کامپوننت‌های سرویس احراز هویت</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس احراز هویت" src="../images/AuthComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۲: کامپوننت‌های سرویس احراز هویت</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس احراز هویت، مسئولیت مدیریت هویت، احراز هویت و کنترل دسترسی مبتنی بر نقش را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و Keycloak پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر احراز هویت</span></td>
+      <td align="center">نقاط پایانی احراز هویت</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">تأمین‌کننده توکن</span></td>
+      <td align="center">تولید و اعتبارسنجی توکن</td>
+      <td align="center">JJWT</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده Keycloak</span></td>
+      <td align="center">یکپارچه‌سازی با Keycloak</td>
+      <td align="center">Keycloak Spring</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن کاربران</span></td>
+      <td align="center">دسترسی به داده‌های کاربران</td>
+      <td align="center">Spring Data JPA</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر نقش‌ها</span></td>
+      <td align="center">کنترل دسترسی مبتنی بر نقش با نقش‌های فروشنده</td>
+      <td align="center">Spring Security</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ثبت‌کننده بازرسی</span></td>
+      <td align="center">ثبت تمام رویدادهای احراز هویت</td>
+      <td align="center">Spring AOP</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_6"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس احراز هویت</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر احراز هویت</span> از <span style="color: #1976D2; font-weight: bold;">تأمین‌کننده توکن</span> برای تولید و اعتبارسنجی توکن‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر احراز هویت</span> از <span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده Keycloak</span> برای یکپارچه‌سازی با سرویس مدیریت هویت استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر احراز هویت</span> از <span style="color: #1976D2; font-weight: bold;">مدیر نقش‌ها</span> برای اعمال کنترل دسترسی مبتنی بر نقش استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده Keycloak</span> اطلاعات کاربران را از <span style="color: #1976D2; font-weight: bold;">مخزن کاربران</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر احراز هویت</span> تمام رویدادها را در <span style="color: #1976D2; font-weight: bold;">ثبت‌کننده بازرسی</span> ثبت می‌کند.</p>
+</li>
+</ul>
+<h2 id="_7"><span style="color: #E91E63;">کامپوننت‌های سرویس کاتالوگ</span><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس کاتالوگ" src="../images/CatalogComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۳: کامپوننت‌های سرویس کاتالوگ</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس کاتالوگ، مسئولیت مدیریت محصولات، دسته‌بندی‌ها و تصاویر را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و MongoDB پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر کاتالوگ</span></td>
+      <td align="center">نقاط پایانی محصولات</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span></td>
+      <td align="center">منطق کسب‌وکار محصولات</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن محصول</span></td>
+      <td align="center">دسترسی به داده‌های محصولات</td>
+      <td align="center">Spring Data MongoDB</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر دسته‌بندی</span></td>
+      <td align="center">مدیریت دسته‌بندی‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">نمایه‌ساز جستجو</span></td>
+      <td align="center">نمایه‌سازی Elasticsearch</td>
+      <td align="center">Elasticsearch Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ذخیره‌سازی تصاویر</span></td>
+      <td align="center">مدیریت تصاویر با MinIO</td>
+      <td align="center">MinIO SDK</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر محصول فروشنده</span></td>
+      <td align="center">مدیریت محصولات مختص فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_8"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس کاتالوگ</span><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر کاتالوگ</span> از <span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> برای اجرای منطق کسب‌وکار استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> داده‌ها را از <span style="color: #1976D2; font-weight: bold;">مخزن محصول</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> از <span style="color: #1976D2; font-weight: bold;">مدیر دسته‌بندی</span> برای مدیریت دسته‌بندی‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> تغییرات را به <span style="color: #1976D2; font-weight: bold;">نمایه‌ساز جستجو</span> منتشر می‌کند تا در Elasticsearch نمایه‌سازی شود.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> تصاویر را در <span style="color: #1976D2; font-weight: bold;">ذخیره‌سازی تصاویر</span> ذخیره و بازیابی می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس محصول</span> از <span style="color: #1976D2; font-weight: bold;">مدیر محصول فروشنده</span> برای مدیریت محصولات مختص فروشنده استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_9"><span style="color: #E91E63;">کامپوننت‌های سرویس موجودی</span><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس موجودی" src="../images/InventoryComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۴: کامپوننت‌های سرویس موجودی</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی، مسئولیت مدیریت موجودی، رزرو و حافظه نهان را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot، PostgreSQL و Redis پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر موجودی</span></td>
+      <td align="center">نقاط پایانی موجودی</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span></td>
+      <td align="center">منطق کسب‌وکار موجودی</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن موجودی</span></td>
+      <td align="center">دسترسی به داده‌های موجودی</td>
+      <td align="center">Spring Data JPA</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر حافظه نهان</span></td>
+      <td align="center">حافظه نهان Redis</td>
+      <td align="center">Redis Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پردازشگر رزرو</span></td>
+      <td align="center">رزرو موقت موجودی</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر موجودی فروشنده</span></td>
+      <td align="center">مدیریت موجودی مختص فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_10"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس موجودی</span><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر موجودی</span> از <span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> برای اجرای منطق کسب‌وکار استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> داده‌ها را از <span style="color: #1976D2; font-weight: bold;">مخزن موجودی</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> از <span style="color: #1976D2; font-weight: bold;">مدیر حافظه نهان</span> برای کشینگ داده‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> از <span style="color: #1976D2; font-weight: bold;">پردازشگر رزرو</span> برای رزرو موقت موجودی استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> از <span style="color: #1976D2; font-weight: bold;">مدیر موجودی فروشنده</span> برای مدیریت موجودی مختص فروشنده استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_11"><span style="color: #E91E63;">کامپوننت‌های سرویس سفارش</span><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس سفارش" src="../images/OrderComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۵: کامپوننت‌های سرویس سفارش</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش، مسئولیت مدیریت چرخه حیات سفارشات را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و PostgreSQL پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر سفارش</span></td>
+      <td align="center">نقاط پایانی سفارش</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span></td>
+      <td align="center">منطق کسب‌وکار سفارش</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن سفارش</span></td>
+      <td align="center">دسترسی به داده‌های سفارش</td>
+      <td align="center">Spring Data JPA</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">انتشاردهنده رویداد</span></td>
+      <td align="center">انتشار رویداد در کافکا</td>
+      <td align="center">Kafka Template</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده تراکنش توزیع‌شده</span></td>
+      <td align="center">مدیریت تراکنش‌های توزیع‌شده</td>
+      <td align="center">Spring State Machine</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر سفارش فروشنده</span></td>
+      <td align="center">مدیریت سفارشات مختص فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_12"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس سفارش</span><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر سفارش</span> از <span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> برای اجرای منطق کسب‌وکار استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> داده‌ها را از <span style="color: #1976D2; font-weight: bold;">مخزن سفارش</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> از <span style="color: #1976D2; font-weight: bold;">انتشاردهنده رویداد</span> برای انتشار رویدادها در کافکا استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> از <span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده تراکنش توزیع‌شده</span> برای مدیریت تراکنش‌های توزیع‌شده استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> از <span style="color: #1976D2; font-weight: bold;">مدیر سفارش فروشنده</span> برای مدیریت سفارشات مختص فروشنده استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_13"><span style="color: #E91E63;">کامپوننت‌های سرویس پرداخت</span><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس پرداخت" src="../images/PaymentComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۶: کامپوننت‌های سرویس پرداخت</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس پرداخت، مسئولیت پردازش پرداخت و یکپارچه‌سازی با درگاه‌های خارجی را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر پرداخت</span></td>
+      <td align="center">نقاط پایانی پرداخت</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span></td>
+      <td align="center">منطق کسب‌وکار پرداخت</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده درگاه پرداخت</span></td>
+      <td align="center">یکپارچه‌سازی با درگاه خارجی</td>
+      <td align="center">RestTemplate</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">ثبت‌کننده تراکنش</span></td>
+      <td align="center">ثبت تراکنش‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">انتشاردهنده کافکا</span></td>
+      <td align="center">انتشار رویدادهای پرداخت</td>
+      <td align="center">Kafka Template</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر پرداخت فروشنده</span></td>
+      <td align="center">مدیریت تسویه حساب فروشندگان</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_14"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس پرداخت</span><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر پرداخت</span> از <span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span> برای اجرای منطق کسب‌وکار استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span> از <span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده درگاه پرداخت</span> برای یکپارچه‌سازی با درگاه خارجی استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span> تراکنش‌ها را در <span style="color: #1976D2; font-weight: bold;">ثبت‌کننده تراکنش</span> ثبت می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span> رویدادها را از طریق <span style="color: #1976D2; font-weight: bold;">انتشاردهنده کافکا</span> منتشر می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر پرداخت</span> از <span style="color: #1976D2; font-weight: bold;">مدیر پرداخت فروشنده</span> برای مدیریت تسویه حساب فروشندگان استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_15"><span style="color: #E91E63;">کامپوننت‌های سرویس فروشنده</span><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس فروشنده" src="images/SellerComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۷: کامپوننت‌های سرویس فروشنده</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده، مسئولیت مدیریت، تأیید و عملکرد فروشندگان را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و PostgreSQL پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر فروشنده</span></td>
+      <td align="center">نقاط پایانی فروشنده</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span></td>
+      <td align="center">منطق کسب‌وکار فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن فروشنده</span></td>
+      <td align="center">دسترسی به داده‌های فروشنده</td>
+      <td align="center">Spring Data JPA</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">تأیید فروشنده</span></td>
+      <td align="center">تأیید مدارک و هویت فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">عملکرد فروشنده</span></td>
+      <td align="center">پیگیری امتیازات و معیارهای فروشنده</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کارمزد فروشنده</span></td>
+      <td align="center">محاسبه کارمزد فروشندگان</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_16"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس فروشنده</span><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر فروشنده</span> از <span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> برای اجرای منطق کسب‌وکار استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> داده‌ها را از <span style="color: #1976D2; font-weight: bold;">مخزن فروشنده</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> از <span style="color: #1976D2; font-weight: bold;">تأیید فروشنده</span> برای تأیید مدارک و هویت فروشندگان استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> از <span style="color: #1976D2; font-weight: bold;">عملکرد فروشنده</span> برای پیگیری امتیازات و معیارهای فروشندگان استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> از <span style="color: #1976D2; font-weight: bold;">کارمزد فروشنده</span> برای محاسبه کارمزد فروشندگان استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_17"><span style="color: #E91E63;">کامپوننت‌های سرویس جستجو</span><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس جستجو" src="../images/SearchComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۸: کامپوننت‌های سرویس جستجو</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس جستجو، مسئولیت جستجوی متن کامل و تکمیل خودکار را بر عهده دارد.</span> این سرویس با استفاده از Elasticsearch پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر جستجو</span></td>
+      <td align="center">نقاط پایانی جستجو</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">سازنده پرس‌وجوی جستجو</span></td>
+      <td align="center">ساخت پرس‌وجو</td>
+      <td align="center">Elasticsearch Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">نمایه‌ساز جستجو</span></td>
+      <td align="center">نمایه‌سازی اسناد</td>
+      <td align="center">Elasticsearch Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پردازشگر تکمیل خودکار</span></td>
+      <td align="center">پیشنهادات جستجو</td>
+      <td align="center">Elasticsearch Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پالایشگر جستجوی فروشنده</span></td>
+      <td align="center">پالایش محصولات بر اساس فروشنده</td>
+      <td align="center">Elasticsearch Client</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_18"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس جستجو</span><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر جستجو</span> از <span style="color: #1976D2; font-weight: bold;">سازنده پرس‌وجوی جستجو</span> برای ساخت پرس‌وجوهای جستجو استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سازنده پرس‌وجوی جستجو</span> از <span style="color: #1976D2; font-weight: bold;">نمایه‌ساز جستجو</span> برای اجرای پرس‌وجوها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر جستجو</span> از <span style="color: #1976D2; font-weight: bold;">پردازشگر تکمیل خودکار</span> برای ارائه پیشنهادات جستجو استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر جستجو</span> از <span style="color: #1976D2; font-weight: bold;">پالایشگر جستجوی فروشنده</span> برای پالایش نتایج بر اساس فروشنده استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_19"><span style="color: #E91E63;">کامپوننت‌های سرویس توصیه‌گر</span><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس توصیه‌گر" src="../images/RecommendationComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۹: کامپوننت‌های سرویس توصیه‌گر</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس توصیه‌گر، مسئولیت ارائه توصیه‌های شخصی‌سازی‌شده به کاربران را بر عهده دارد.</span> این سرویس با استفاده از Python و FastAPI پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر توصیه‌گر</span></td>
+      <td align="center">نقاط پایانی توصیه‌گر</td>
+      <td align="center">FastAPI</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">موتور توصیه‌گر</span></td>
+      <td align="center">منطق یادگیری ماشین برای توصیه‌ها</td>
+      <td align="center">Python + Pandas</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">شنونده فعالیت کاربر</span></td>
+      <td align="center">مصرف رویدادهای کافکا</td>
+      <td align="center">Kafka Python</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مشتری حافظه نهان</span></td>
+      <td align="center">حافظه نهان Redis</td>
+      <td align="center">Redis Client</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">توصیه‌گر فروشنده</span></td>
+      <td align="center">توصیه محصولات از فروشندگان خاص</td>
+      <td align="center">Python</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_20"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس توصیه‌گر</span><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر توصیه‌گر</span> از <span style="color: #1976D2; font-weight: bold;">موتور توصیه‌گر</span> برای اجرای منطق توصیه‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">موتور توصیه‌گر</span> از <span style="color: #1976D2; font-weight: bold;">شنونده فعالیت کاربر</span> برای دریافت رویدادهای فعالیت کاربران استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">موتور توصیه‌گر</span> از <span style="color: #1976D2; font-weight: bold;">مشتری حافظه نهان</span> برای کشینگ نتایج توصیه‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">موتور توصیه‌گر</span> از <span style="color: #1976D2; font-weight: bold;">توصیه‌گر فروشنده</span> برای ارائه توصیه‌های مبتنی بر فروشنده استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_21"><span style="color: #E91E63;">کامپوننت‌های سرویس اطلاع‌رسانی</span><a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس اطلاع‌رسانی" src="../images/NotificationComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱۰: کامپوننت‌های سرویس اطلاع‌رسانی</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس اطلاع‌رسانی، مسئولیت ارسال اطلاع‌رسانی‌های چندکاناله را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر اطلاع‌رسانی</span></td>
+      <td align="center">نقاط پایانی اطلاع‌رسانی</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span></td>
+      <td align="center">مسیریابی اطلاع‌رسانی‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده ایمیل</span></td>
+      <td align="center">یکپارچه‌سازی با ایمیل</td>
+      <td align="center">Spring Mail</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده پیامک</span></td>
+      <td align="center">یکپارچه‌سازی با پیامک</td>
+      <td align="center">RestTemplate</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مصرف‌کننده کافکا</span></td>
+      <td align="center">مصرف رویدادها</td>
+      <td align="center">Kafka Listener</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">اطلاع‌رسانی فروشنده</span></td>
+      <td align="center">اطلاع‌رسانی به فروشندگان درباره سفارشات و به‌روزرسانی‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_22"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس اطلاع‌رسانی</span><a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر اطلاع‌رسانی</span> از <span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span> برای مسیریابی اطلاع‌رسانی‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span> از <span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده ایمیل</span> برای ارسال ایمیل‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span> از <span style="color: #1976D2; font-weight: bold;">هماهنگ‌کننده پیامک</span> برای ارسال پیامک‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مصرف‌کننده کافکا</span> رویدادها را دریافت کرده و به <span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span> ارسال می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">توزیع‌کننده اطلاع‌رسانی</span> از <span style="color: #1976D2; font-weight: bold;">اطلاع‌رسانی فروشنده</span> برای اطلاع‌رسانی به فروشندگان استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_23"><span style="color: #E91E63;">کامپوننت‌های سرویس تحلیل</span><a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس تحلیل" src="../images/AnalyticsComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱۱: کامپوننت‌های سرویس تحلیل</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس تحلیل، مسئولیت گزارش‌دهی و تحلیل داده‌ها را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و ClickHouse پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">کنترلگر تحلیل</span></td>
+      <td align="center">نقاط پایانی تحلیل</td>
+      <td align="center">Spring MVC</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">تولیدکننده گزارش</span></td>
+      <td align="center">ایجاد گزارش‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پردازشگر داده</span></td>
+      <td align="center">پردازش داده‌ها</td>
+      <td align="center">Spring Service</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مصرف‌کننده کافکا</span></td>
+      <td align="center">مصرف رویدادها</td>
+      <td align="center">Kafka Listener</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مخزن تحلیل</span></td>
+      <td align="center">دسترسی به داده‌های تحلیل</td>
+      <td align="center">Spring Data ClickHouse</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">تحلیل فروشنده</span></td>
+      <td align="center">گزارش‌های عملکرد فروشندگان</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_24"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس تحلیل</span><a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کنترلگر تحلیل</span> از <span style="color: #1976D2; font-weight: bold;">تولیدکننده گزارش</span> برای ایجاد گزارش‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">تولیدکننده گزارش</span> از <span style="color: #1976D2; font-weight: bold;">پردازشگر داده</span> برای پردازش داده‌ها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر داده</span> از <span style="color: #1976D2; font-weight: bold;">مصرف‌کننده کافکا</span> برای دریافت رویدادها استفاده می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر داده</span> داده‌ها را از <span style="color: #1976D2; font-weight: bold;">مخزن تحلیل</span> می‌خواند و در آن ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پردازشگر داده</span> از <span style="color: #1976D2; font-weight: bold;">تحلیل فروشنده</span> برای ارائه گزارش‌های عملکرد فروشندگان استفاده می‌کند.</p>
+</li>
+</ul>
+<h2 id="_25"><span style="color: #E91E63;">کامپوننت‌های پشته پایش</span><a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های پشته پایش" src="../images/MonitoringComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱۲: کامپوننت‌های پشته پایش</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">پشته پایش، مسئولیت مشاهده‌پذیری و پایش سامانه را بر عهده دارد.</span> این پشته با استفاده از Prometheus، Grafana، Jaeger و ELK پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پرومتئوس</span></td>
+      <td align="center">جمع‌آوری معیارها</td>
+      <td align="center">Prometheus</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">گرافانا</span></td>
+      <td align="center">داشبورد و نمایشگر</td>
+      <td align="center">Grafana</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">یاگر</span></td>
+      <td align="center">ردیابی توزیع‌شده</td>
+      <td align="center">Jaeger</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">پشته ELK</span></td>
+      <td align="center">تجمیع لاگ</td>
+      <td align="center">Elasticsearch + Logstash + Kibana</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_26"><span style="color: #E91E63;">روابط بین کامپوننت‌های پشته پایش</span><a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پرومتئوس</span> معیارها را از تمام سرویس‌ها دریافت می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">گرافانا</span> داده‌های پرومتئوس را نمایش می‌دهد.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">یاگر</span> ردگیری‌های توزیع‌شده را از تمام سرویس‌ها دریافت می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پشته ELK</span> لاگ‌ها را از تمام سرویس‌ها دریافت می‌کند.</p>
+</li>
+</ul>
+<h2 id="_27"><span style="color: #E91E63;">کامپوننت‌های لایه مقاوم‌سازی</span><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های لایه مقاوم‌سازی" src="../images/ResilienceComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱۳: کامپوننت‌های لایه مقاوم‌سازی</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">لایه مقاوم‌سازی، مسئولیت افزایش تاب‌آوری سامانه را بر عهده دارد.</span> این لایه با استفاده از Resilience4J و Istio پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">قطع‌کننده مدار</span></td>
+      <td align="center">جلوگیری از خرابی‌های آبشاری</td>
+      <td align="center">Resilience4J</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مکانیزم تکرار</span></td>
+      <td align="center">تکرار خودکار با پشتیبان نمایی</td>
+      <td align="center">Resilience4J</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">محدودکننده نرخ</span></td>
+      <td align="center">محدودیت درخواست‌ها برای هر سرویس</td>
+      <td align="center">Resilience4J + Kong</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="_28"><span style="color: #E91E63;">کامپوننت‌های سرویس پشتیبان‌گیری</span><a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p><img alt="نمودار کامپوننت‌های سرویس پشتیبان‌گیری" src="../images/BackupComponents-dark.svg" /></p>
+<p><em>نمودار ۳-۱۴: کامپوننت‌های سرویس پشتیبان‌گیری</em></p>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس پشتیبان‌گیری، مسئولیت پشتیبان‌گیری خودکار و بازیابی در شرایط فاجعه را بر عهده دارد.</span> این سرویس با استفاده از Spring Boot و AWS S3 پیاده‌سازی شده است.</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">کامپوننت</th>
+      <th align="center">مسئولیت</th>
+      <th align="center">فناوری</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">زمان‌بند پشتیبان‌گیری</span></td>
+      <td align="center">پشتیبان‌گیری زمان‌بندی‌شده هر ۶ ساعت</td>
+      <td align="center">Spring Scheduler</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">اجراکننده پشتیبان‌گیری</span></td>
+      <td align="center">انجام پشتیبان‌گیری واقعی در S3</td>
+      <td align="center">AWS SDK</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="color: #1976D2; font-weight: bold;">مدیر بازیابی</span></td>
+      <td align="center">بازیابی در نقطه زمانی مشخص</td>
+      <td align="center">Spring Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="_29"><span style="color: #E91E63;">روابط بین کامپوننت‌های سرویس پشتیبان‌گیری</span><a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">زمان‌بند پشتیبان‌گیری</span> هر ۶ ساعت یکبار، <span style="color: #1976D2; font-weight: bold;">اجراکننده پشتیبان‌گیری</span> را فراخوانی می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">اجراکننده پشتیبان‌گیری</span> با استفاده از AWS SDK، پشتیبان‌گیری را در S3 ذخیره می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیر بازیابی</span> امکان بازیابی داده‌ها از نقاط زمانی مشخص را فراهم می‌کند.</p>
+</li>
+</ul>
+<h2 id="_30"><span style="color: #E91E63;">پانویس‌ها</span><a class="headerlink" href="#_30" title="Permanent link">&para;</a></h2>
+<p>¹ واحد قابل استقرار مجزا در معماری نرم‌افزار که می‌تواند به صورت مستقل اجرا و مقیاس‌پذیر شود.</p>
+<p>² رابط برنامه‌نویسی برای ارتباط بین سرویس‌ها که از پروتکل HTTP و روش‌های استاندارد استفاده می‌کند.</p>
+<p>³ الگویی که از ارسال درخواست به سرویس معیوب جلوگیری می‌کند و به آن فرصت بازیابی می‌دهد.</p>
+<p>⁴ الگویی که در صورت بروز خطا، درخواست را با زمان‌های انتظار افزایشی مجدداً ارسال می‌کند.</p>
+<p>⁵ الگویی که تعداد درخواست‌های ارسالی به یک سرویس را در بازه زمانی مشخص محدود می‌کند.</p>
+<p>⁶ سامانه‌ای توزیع‌شده برای پخش رویداد و پیام‌رسانی با توان عملیاتی بالا.</p>
+<p>⁷ حافظه‌ای برای ذخیره موقت داده‌ها با کارایی بالا.</p>
+<p>⁸ پایگاه داده اسنادمحور برای ذخیره‌سازی داده‌های نیمه‌ساختاریافته.</p>
+<p>⁹ موتور جستجوی متن‌باز با قابلیت جستجوی متن کامل.</p>
+<p>¹⁰ سامانه‌ای برای ذخیره‌سازی اشیاء مانند تصاویر و فایل‌های ایستا.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
