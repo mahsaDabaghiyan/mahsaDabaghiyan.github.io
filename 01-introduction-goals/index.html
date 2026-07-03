@@ -328,7 +328,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۱. هدف سند
+        هدف سند
       
     </span>
   </a>
@@ -339,7 +339,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۲. محدوده سیستم
+        محدوده و مرزهای سامانه
       
     </span>
   </a>
@@ -350,7 +350,29 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۳. مخاطبان سند
+        مخاطبان سند
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ساختار معماری سامانه
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
       
     </span>
   </a>
@@ -719,7 +741,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۱. هدف سند
+        هدف سند
       
     </span>
   </a>
@@ -730,7 +752,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۲. محدوده سیستم
+        محدوده و مرزهای سامانه
       
     </span>
   </a>
@@ -741,7 +763,29 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ۱.۳. مخاطبان سند
+        مخاطبان سند
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ساختار معماری سامانه
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پانویس‌ها
       
     </span>
   </a>
@@ -765,24 +809,123 @@
 
 
 
-<h1 id="_1">۱. مقدمه و اهداف<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">۱.۱. هدف سند<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>این سند، به عنوان مرجع اصلی معماری سامانه فروشگاه اینترنتی تدوین شده است. هدف از نگارش آن، ترسیم یک نقشه راه فنی جامع برای تمامی ذی‌نفعان پروژه است.</p>
-<h2 id="_3">۱.۲. محدوده سیستم<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>این سامانه یک پلتفرم تجارت الکترونیک است که تعاملات چهار گروه کاربری را مدیریت می‌کند:</p>
+<h1 id="_1"><span style="color: #E91E63;">مقدمه و اهداف</span><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><span style="color: #E91E63;">هدف سند</span><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">این سند، به عنوان مرجع اصلی معماری سامانه فروشگاه اینترنتی تدوین شده است.</span></p>
+<p>هدف از نگارش این سند، ترسیم یک نقشه راه فنی جامع و قابل اتکا برای تمامی ذی‌نفعان پروژه است. این سند فراتر از یک توصیف صرف از ساختار سامانه، به تبیین منطق و دلایل پشت هر تصمیم معماری می‌پردازد و چارچوبی برای تصمیم‌گیری‌های آتی فراهم می‌آورد.</p>
+<h2 id="_3"><span style="color: #E91E63;">محدوده و مرزهای سامانه</span><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>این مستند، معماری یک پلتفرم تجارت الکترونیک را پوشش می‌دهد که به عنوان یک اکوسیستم دیجیتال، تعاملات شش گروه کاربری اصلی را مدیریت می‌کند:</p>
 <ol>
-<li><strong>مشتریان:</strong> جستجو، خرید، پرداخت و پیگیری سفارشات</li>
-<li><strong>فروشندگان:</strong> ثبت، مدیریت موجودی و قیمت‌گذاری محصولات</li>
-<li><strong>مدیران سامانه:</strong> مدیریت کاربران و نظارت بر فرآیندها</li>
-<li><strong>تحلیل‌گران:</strong> دسترسی به داده‌ها و گزارش‌های تحلیلی</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مشتریان</span> که به جستجو، خرید، پرداخت و پیگیری سفارشات خود می‌پردازند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">فروشندگان</span> که مسئولیت ثبت، مدیریت موجودی و قیمت‌گذاری محصولات خود را بر عهده دارند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیران سامانه</span> که بر عملکرد کل سامانه، مدیریت کاربران و تأیید نهایی فرآیندها نظارت دارند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">تحلیل‌گران کسب‌وکار</span> که به داده‌های حاصل از عملکرد سامانه برای استخراج بینش و گزارش‌های راهبردی دسترسی دارند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مهندسان دواپس</span> که مسئولیت مدیریت استقرار، پایش و زیرساخت سامانه را بر عهده دارند.</p>
+</li>
 </ol>
-<h2 id="_4">۱.۳. مخاطبان سند<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>مرز این سامانه، تعاملات با سامانه‌های خارجی از جمله درگاه‌های پرداخت، سامانه‌های لجستیک، خدمات ارسال پیام، شبکه توزیع محتوا و سامانه‌های پایش خارجی را نیز در بر می‌گیرد.</p>
+<h2 id="_4"><span style="color: #E91E63;">مخاطبان سند</span><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>این سند برای طیف گسترده‌ای از مخاطبان با سطوح مختلف دانش فنی نگارش شده است:</p>
 <ul>
-<li>توسعه‌دهندگان و معماران نرم‌افزار</li>
-<li>مدیران ارشد فنی</li>
-<li>مدیران پروژه</li>
-<li>کارشناسان کسب‌وکار</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">توسعه‌دهندگان و معماران نرم‌افزار</span> برای درک ساختار، تصمیمات فنی و چگونگی پیاده‌سازی</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیران ارشد فنی</span> برای ارزیابی و تأیید رویکردهای معماری و تخصیص منابع</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">مدیران پروژه</span> برای برنامه‌ریزی، زمان‌بندی و مدیریت ریسک‌ها</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کارشناسان حوزه کسب‌وکار</span> برای درک کلان از قابلیت‌ها و محدودیت‌های سامانه</p>
+</li>
 </ul>
+<h2 id="_5"><span style="color: #E91E63;">ساختار معماری سامانه</span><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>سامانه فروشگاه اینترنتی بر اساس معماری <span style="color: #1976D2; font-weight: bold;">ریزخدمات</span>¹ طراحی شده است. این معماری شامل اجزای زیر می‌باشد:</p>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه‌های کاربردی:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه وب</span> با استفاده از Next.js که رابط کاربری برای مشتریان، مدیران و فروشندگان را فراهم می‌کند.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">برنامه موبایل</span> با استفاده از React Native که تجربه کاربری بومی را برای مشتریان ارائه می‌دهد.</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">زیرساخت ارتباطی و امنیت:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">شبکه توزیع محتوا</span> با استفاده از Cloudflare برای توزیع محتوای ایستا و محافظت در برابر حملات انکار سرویس.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">دروازه رابط برنامه‌نویسی</span> با استفاده از Kong برای مسیریابی درخواست، احراز هویت و محدودیت نرخ.</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس‌های حوزه کسب‌وکار:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس احراز هویت</span> با استفاده از Spring Boot و Keycloak برای مدیریت هویت، احراز هویت و کنترل دسترسی مبتنی بر نقش.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس کاتالوگ</span> با استفاده از Spring Boot و MongoDB برای مدیریت محصولات و دسته‌بندی‌ها.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس موجودی</span> با استفاده از Spring Boot، PostgreSQL و Redis برای مدیریت موجودی و رزرو.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس سفارش</span> با استفاده از Spring Boot و PostgreSQL برای مدیریت چرخه حیات سفارشات.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس پرداخت</span> با استفاده از Spring Boot برای پردازش پرداخت و یکپارچه‌سازی با درگاه‌های خارجی.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس فروشنده</span> با استفاده از Spring Boot و PostgreSQL برای مدیریت، تأیید و عملکرد فروشندگان.</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس‌های پشتیبانی و تحلیل:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس جستجو</span> با استفاده از Elasticsearch برای جستجوی متن کامل و تکمیل خودکار.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس توصیه‌گر</span> با استفاده از Python و FastAPI برای ارائه توصیه‌های شخصی‌سازی‌شده.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس اطلاع‌رسانی</span> با استفاده از Spring Boot برای اطلاع‌رسانی چندکاناله.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس تحلیل</span> با استفاده از Spring Boot و ClickHouse برای گزارش‌دهی و تحلیل داده.</p>
+</li>
+</ul>
+<p><span style="color: #1976D2; font-weight: bold;">زیرساخت داده و پایش:</span></p>
+<ul>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">کافکا</span> برای پخش رویداد و ارتباطات ناهمگام.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">حافظه نهان توزیع‌شده</span> با استفاده از Redis.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">پشته پایش</span> با استفاده از Prometheus، Grafana، Jaeger و ELK برای مشاهده‌پذیری و پایش.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">لایه مقاوم‌سازی</span> با استفاده از Resilience4J و Istio برای افزایش تاب‌آوری سامانه.</p>
+</li>
+<li>
+<p><span style="color: #1976D2; font-weight: bold;">سرویس پشتیبان‌گیری</span> با استفاده از Spring Boot و AWS S3 برای پشتیبان‌گیری خودکار و بازیابی در شرایط فاجعه.</p>
+</li>
+</ul>
+<h2 id="_6"><span style="color: #E91E63;">پانویس‌ها</span><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><span style="color: #1976D2; font-weight: bold;">¹ ریزخدمات</span>
+رویکردی در معماری نرم‌افزار که سیستم را به مجموعه‌ای از سرویس‌های کوچک، مستقل و قابل استقرار جداگانه تقسیم می‌کند. هر سرویس حول یک قابلیت کسب‌وکار خاص سازماندهی می‌شود و از طریق رابط‌های برنامه‌نویسی با سایر سرویس‌ها ارتباط برقرار می‌کند.</p>
 
 
 
